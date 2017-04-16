@@ -67,13 +67,28 @@ table {
     -moz-transition: all @transitionTime ease-out;;
 }
 .border-bottom(@color){
-    border-bottom:1px solid @color
+    border-bottom:2px solid @color
+}
+.pd10{
+    padding:10px 0;
 }
 .pd20{
     padding:20px 0;
 }
 .pd40{
     padding:40px 0;
+}
+.mg5{
+    margin:5px 0;
+}
+.mg10{
+    margin:10px 0;
+}
+.mg20{
+    margin:20px 0;
+}
+.mg40{
+    margin:40px 0;
 }
 .textInfo{
     font-size:16px;
@@ -84,10 +99,13 @@ table {
 
 
 
+
 /***** 预制类******/
-
-
+.affix-top{
+    position:absolute;
+}
 /***** 预制类 end******/
+
 
 
 /***** 轮播图 ******/
@@ -104,10 +122,15 @@ table {
 
 /***** 轮播图 end *****/
 
-
+.affix{
+    top:0;
+}
 /***** 导航 ******/
 header{
+    width: 100%!important;
     height:@navHeight;
+    z-index: 10000;
+    background: #fff!important;
     .row{
         .logo{
             height:@navHeight!important;
@@ -142,21 +165,56 @@ header{
         }
     }
 }
+
 /***** 导航 end******/
 
 /***** 主体 ******/
-main#about-PE{
+section#about-PE{
     background: #e7e7e7;
-    .row{
-        .pd40;
+    >div.container{
+       padding-top: 100px;
     }
-    h2{
-        width: 180px;
-        margin:0 auto;
-        .border-bottom(@border-color)
+    .intro{
+        h2{
+            width: 180px;
+            margin:0 auto;
+            .border-bottom(@border-color);
+            .pd10;
+        }
+        p{
+            .pd20;
+            .textInfo
+        }
     }
-    p{
-        .pd20;
-        .textInfo
+    .service{
+        &>div{
+            .mg20;
+            .service-title{
+                .mg5;
+                padding:0;
+                h3{
+                    .pd10;
+                }
+                &:hover{
+                    i{
+                        color:@activeColor
+                    }
+                }
+            }
+            .service-content{
+                .mg5;
+                padding: 0;
+                cursor: pointer;
+                p{
+                    .textInfo;
+                    span:hover{
+                        .border-bottom(#999)
+                    }
+
+                }
+            }
+        }
+
     }
+
 }

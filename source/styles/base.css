@@ -125,11 +125,26 @@ table {
 }
 /***** reset end******/
 /***** 预置变量 ******/
+.pd10 {
+  padding: 10px 0;
+}
 .pd20 {
   padding: 20px 0;
 }
 .pd40 {
   padding: 40px 0;
+}
+.mg5 {
+  margin: 5px 0;
+}
+.mg10 {
+  margin: 10px 0;
+}
+.mg20 {
+  margin: 20px 0;
+}
+.mg40 {
+  margin: 40px 0;
 }
 .textInfo {
   font-size: 16px;
@@ -138,6 +153,9 @@ table {
 }
 /***** 预制变量 end******/
 /***** 预制类******/
+.affix-top {
+  position: absolute;
+}
 /***** 预制类 end******/
 /***** 轮播图 ******/
 #myCarousel1,
@@ -150,9 +168,15 @@ table {
   align-items: center;
 }
 /***** 轮播图 end *****/
+.affix {
+  top: 0;
+}
 /***** 导航 ******/
 header {
+  width: 100%!important;
   height: 50px;
+  z-index: 10000;
+  background: #fff!important;
 }
 header .row .logo {
   height: 50px !important;
@@ -189,20 +213,47 @@ header .row nav.navbar .active a:hover {
 }
 /***** 导航 end******/
 /***** 主体 ******/
-main#about-PE {
+section#about-PE {
   background: #e7e7e7;
 }
-main#about-PE .row {
-  padding: 40px 0;
+section#about-PE > div.container {
+  padding-top: 100px;
 }
-main#about-PE h2 {
+section#about-PE .intro h2 {
   width: 180px;
   margin: 0 auto;
-  border-bottom: 1px solid #C00;
+  border-bottom: 2px solid #C00;
+  padding: 10px 0;
 }
-main#about-PE p {
+section#about-PE .intro p {
   padding: 20px 0;
   font-size: 16px;
   line-height: 150%;
   text-align: justify;
+}
+section#about-PE .service > div {
+  margin: 20px 0;
+}
+section#about-PE .service > div .service-title {
+  margin: 5px 0;
+  padding: 0;
+}
+section#about-PE .service > div .service-title h3 {
+  padding: 10px 0;
+}
+section#about-PE .service > div .service-title:hover i {
+  color: #C00;
+}
+section#about-PE .service > div .service-content {
+  margin: 5px 0;
+  padding: 0;
+  cursor: pointer;
+}
+section#about-PE .service > div .service-content p {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: justify;
+}
+section#about-PE .service > div .service-content p span:hover {
+  border-bottom: 2px solid #999;
 }
