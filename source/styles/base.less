@@ -56,6 +56,14 @@ table {
 /***** reset end******/
 
 
+@font-face {
+  font-family : test2 ;
+  src:url('../fonts/test2.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal
+}
+
+
 /***** 预置变量 ******/
 @navHeight:50px;
 @activeColor:#C00;
@@ -142,8 +150,10 @@ header{
             margin-bottom:0;
             background: #fff!important;
             border:none;
-            font-weight:600;
-            font-size: 14px;
+          font-size:15px;
+          font-family:test2 ;
+
+
             z-index: 8000;
             button.navbar-toggle{
                 background: none;
@@ -208,7 +218,7 @@ section#about-PE{
                 p{
                     .textInfo;
                     span:hover{
-                        .border-bottom(#999)
+                        .border-bottom(red)
                     }
 
                 }
@@ -216,5 +226,4 @@ section#about-PE{
         }
 
     }
-
 }

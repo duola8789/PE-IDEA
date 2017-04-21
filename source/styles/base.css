@@ -124,6 +124,12 @@ table {
   border-spacing: 0;
 }
 /***** reset end******/
+@font-face {
+  font-family: test2 ;
+  src: url('../fonts/test2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /***** 预置变量 ******/
 .pd10 {
   padding: 10px 0;
@@ -188,8 +194,8 @@ header .row nav.navbar {
   margin-bottom: 0;
   background: #fff!important;
   border: none;
-  font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: test2 ;
   z-index: 8000;
 }
 header .row nav.navbar button.navbar-toggle {
@@ -255,5 +261,5 @@ section#about-PE .service > div .service-content p {
   text-align: justify;
 }
 section#about-PE .service > div .service-content p span:hover {
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid red;
 }
