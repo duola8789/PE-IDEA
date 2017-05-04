@@ -4,7 +4,17 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+@font-face {
+  font-family : test ;
+  src: url('../fonts/test.eot');
+  src:
+      url('../fonts/test.eot?#font-spider') format('embedded-opentype'),
+      url('../fonts/test.woff') format('woff'),
+      url('../fonts/test.ttf') format('truetype'),
+      url('../fonts/test.svg') format('svg');
+  font-weight:normal;
+  font-style:normal
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,6 +33,7 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+  font-family: "Helvetica Neue", Helvetica, Arial, test, sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -56,12 +67,7 @@ table {
 /***** reset end******/
 
 
-@font-face {
-  font-family : test2 ;
-  src:url('../fonts/test2.ttf') format('truetype');
-  font-weight:normal;
-  font-style:normal
-}
+
 
 
 /***** 预置变量 ******/
