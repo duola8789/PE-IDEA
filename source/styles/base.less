@@ -18,203 +18,237 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
+  content: '';
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: @normal-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active {
+  color: @normal-color;
+  text-decoration: none;
 }
 
 /***** reset end******/
 
-
 /***** 预置变量 ******/
-@navHeight:50px;
-@activeColor:#C00;
-@hoverColor:#C00;
-@border-color:#C00;
-.transition(@transitionTime){
-    transition:all @transitionTime ease-out;
-    -webkit-transition:all @transitionTime ease-out;
-    -moz-transition: all @transitionTime ease-out;;
+@navHeight: 50px;
+@activeColor: #C00;
+@hoverColor: #C00;
+@border-color: #C00;
+@normal-color: #333;
+.transition(@transitionTime) {
+  transition: all @transitionTime ease-out;
+  -webkit-transition: all @transitionTime ease-out;
+  -moz-transition: all @transitionTime ease-out;;
 }
-.border-bottom(@color){
-    border-bottom:2px solid @color
+
+.border-bottom(@color) {
+  border-bottom: 2px solid @color
 }
-.pd10{
-    padding:10px 0;
+
+.pd10 {
+  padding: 10px 0;
 }
-.pd20{
-    padding:20px 0;
+
+.pd20 {
+  padding: 20px 0;
 }
-.pd40{
-    padding:40px 0;
+
+.pd40 {
+  padding: 40px 0;
 }
-.mg5{
-    margin:5px 0;
+
+.mg5 {
+  margin: 5px 0;
 }
-.mg10{
-    margin:10px 0;
+
+.mg10 {
+  margin: 10px 0;
 }
-.mg20{
-    margin:20px 0;
+
+.mg20 {
+  margin: 20px 0;
 }
-.mg40{
-    margin:40px 0;
+
+.mg40 {
+  margin: 40px 0;
 }
-.textInfo{
-    font-size:16px;
-    line-height: 150%;
-    text-align: justify;
+
+.textInfo {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: justify;
 }
+
 /***** 预制变量 end******/
 
-
-
-
 /***** 预制类******/
-.affix-top{
-    position:absolute;
+.affix-top {
+  position: absolute;
 }
+
 /***** 预制类 end******/
 
-
-
 /***** 轮播图 ******/
-#myCarousel1{
-    &, .item{
-        max-height: 650px;
-    }
-    .carousel-control{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+#myCarousel {
+  &, .item {
+    //max-height: 650px;
+  }
+  img{
+    width: 100%;
+  }
+  .carousel-inner{
+    height:100%;
+  }
+  .carousel-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /***** 轮播图 end *****/
 
-.affix{
-    top:0;
+.affix {
+  top: 0;
 }
+
 /***** 导航 ******/
-header{
-    width: 100%!important;
-    height:@navHeight;
-    z-index: 10000;
-    background: #fff!important;
-    .row{
-        .logo{
-            height:@navHeight!important;
-            background: url("../ico/logo.png") no-repeat  center;
-            background-size: contain;
-            z-index: 10000;
-        }
-        nav.navbar{
-            margin-bottom:0;
-            background: #fff!important;
-            border:none;
-            font-weight:600;
-            font-size: 14px;
-            z-index: 8000;
-            button.navbar-toggle{
-                background: none;
-                border:none;
-            }
-            a:hover{
-                color:@hoverColor;;
-                background: none;
-                .transition(0.3s)
-            }
-            .active a{
-                background: none;
-                color:@hoverColor;
-                &:hover{
-                    background: none;
-                    color:@hoverColor;
-                }
-            }
-        }
+header {
+  width: 100% !important;
+  height: @navHeight;
+  z-index: 10000;
+  background: #fff !important;
+  .row {
+    .logo {
+      height: @navHeight !important;
+      background: url("../ico/logo.png") no-repeat center;
+      background-size: contain;
+      z-index: 10000;
     }
+    nav.navbar {
+      margin-bottom: 0;
+      background: #fff !important;
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+      z-index: 8000;
+      button.navbar-toggle {
+        background: none;
+        border: none;
+      }
+      a:hover {
+        color: @hoverColor;;
+        background: none;
+        .transition(0.3s)
+      }
+      .active a {
+        background: none;
+        color: @hoverColor;
+        &:hover {
+          background: none;
+          color: @hoverColor;
+        }
+      }
+    }
+  }
 }
 
 /***** 导航 end******/
 
 /***** 主体 ******/
-section#about-PE{
-    background: #e7e7e7;
-    >div.container{
-       padding-top: 100px;
-    }
-    .intro{
-        h2{
-            width: 180px;
-            margin:0 auto;
-            .border-bottom(@border-color);
-            .pd10;
-        }
-        p{
-            .pd20;
-            .textInfo
-        }
-    }
-    .service{
-        &>div{
-            .mg20;
-            .service-title{
-                .mg5;
-                padding:0;
-                h3{
-                    .pd10;
-                }
-                &:hover{
-                    i{
-                        color:@activeColor
-                    }
-                }
-            }
-            .service-content{
-                .mg5;
-                padding: 0;
-                cursor: pointer;
-                p{
-                    .textInfo;
-                    span:hover{
-                        .border-bottom(#999)
-                    }
+#aboutPeWrap {
+  color: @normal-color;
+  &:hover, &:active {
+    color: @normal-color;
+    text-decoration: none;
+  }
+  cursor: pointer;
+}
 
-                }
-            }
-        }
-
+section#about-PE {
+  background: #e7e7e7;
+  > div.container {
+    padding-top: 100px;
+  }
+  .intro {
+    h2 {
+      width: 180px;
+      margin: 0 auto;
+      .border-bottom(@border-color);
+      .pd10;
     }
+    a {
+      display: inline-block;
+      .pd20;
+      .textInfo
+    }
+  }
+  .service {
+    & > div {
+      .mg20;
+      .service-title {
+        .mg5;
+        padding: 0;
+        h3 {
+          .pd10;
+        }
+        &:hover {
+          i {
+            color: @activeColor
+          }
+        }
+      }
+      .service-content {
+        .mg5;
+        padding: 0;
+        cursor: pointer;
+        p {
+          .textInfo;
+          span:hover {
+            .border-bottom(#999)
+          }
+
+        }
+      }
+    }
+
+  }
 
 }

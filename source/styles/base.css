@@ -123,6 +123,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
 /***** reset end******/
 /***** 预置变量 ******/
 .pd10 {
@@ -158,11 +171,13 @@ table {
 }
 /***** 预制类 end******/
 /***** 轮播图 ******/
-#myCarousel1,
-#myCarousel1 .item {
-  max-height: 650px;
+#myCarousel img {
+  width: 100%;
 }
-#myCarousel1 .carousel-control {
+#myCarousel .carousel-inner {
+  height: 100%;
+}
+#myCarousel .carousel-control {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,10 +188,10 @@ table {
 }
 /***** 导航 ******/
 header {
-  width: 100%!important;
+  width: 100% !important;
   height: 50px;
   z-index: 10000;
-  background: #fff!important;
+  background: #fff !important;
 }
 header .row .logo {
   height: 50px !important;
@@ -186,7 +201,7 @@ header .row .logo {
 }
 header .row nav.navbar {
   margin-bottom: 0;
-  background: #fff!important;
+  background: #fff !important;
   border: none;
   font-weight: 600;
   font-size: 14px;
@@ -213,6 +228,15 @@ header .row nav.navbar .active a:hover {
 }
 /***** 导航 end******/
 /***** 主体 ******/
+#aboutPeWrap {
+  color: #333;
+  cursor: pointer;
+}
+#aboutPeWrap:hover,
+#aboutPeWrap:active {
+  color: #333;
+  text-decoration: none;
+}
 section#about-PE {
   background: #e7e7e7;
 }
@@ -225,7 +249,8 @@ section#about-PE .intro h2 {
   border-bottom: 2px solid #C00;
   padding: 10px 0;
 }
-section#about-PE .intro p {
+section#about-PE .intro a {
+  display: inline-block;
   padding: 20px 0;
   font-size: 16px;
   line-height: 150%;

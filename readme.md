@@ -21,3 +21,9 @@ The website for PE-IDEA industry design company which is established by my ex-co
 8.当只定义position：absolute时，top,bottom，left,right都不指定，则left，top值与原
 文档流位置一致。即跟当它static时的位置一样，但是不占位。
 9. 自己编写的导航条滚动函数
+10. icon图标
+11. 点击导航后平滑滚动到锚点的代码
+
+提供的尺寸：
+1. 浏览器标题栏前的图标128X128，格式为ico
+2. 轮播图尺寸1067*650，为保证效果须统一尺寸， 格式为jpg
