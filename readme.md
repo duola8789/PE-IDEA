@@ -7,7 +7,8 @@ The website for PE-IDEA industry design company which is established by my ex-co
 2. 字体
 3. 轮播图尺寸1067*650，为保证效果须统一尺寸
 4. 滚动监听
-
+4. new 标识
+6. 针对手机优化
 
 
 需要总结的知识：
@@ -23,7 +24,9 @@ The website for PE-IDEA industry design company which is established by my ex-co
 9. 自己编写的导航条滚动函数
 10. icon图标
 11. 点击导航后平滑滚动到锚点的代码
+12. jquery.aniview.min.js
+13. hover抖动问题（所有案例）父元素增加position absolute
 
 提供的尺寸：
 1. 浏览器标题栏前的图标128X128，格式为ico
-2. 轮播图尺寸1067*650，为保证效果须统一尺寸， 格式为jpg
+2. 大图尺寸1920*1080(轮播+联系我们背景)

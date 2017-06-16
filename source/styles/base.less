@@ -1,10 +1,4 @@
 /***** reset.css******/
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,135 +16,155 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol, ul {
   list-style: none;
 }
-
 blockquote, q {
   quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-a {
-  color: @normal-color;
-  text-decoration: none;
-  cursor: pointer;
+//a {
+//  color: @normal-color;
+//  text-decoration: none;
+//  cursor: pointer;
+//}
+//a:link, a:visited, a:hover, a:focus, a:active {
+//  color: @normal-color;
+//  text-decoration: none;
+//}
+h2{
+  font-size:24px;
 }
-
-a:link, a:visited, a:hover, a:focus, a:active {
-  color: @normal-color;
-  text-decoration: none;
+h3{
+  font-size:18px;
+}
+h4{
+  font-size:16px;
+}
+@media (min-width: 1200px){
+  .container {
+    width: 1270px;
+  }
 }
 
 /***** reset end******/
 
-/***** 预置变量 ******/
+
+/************************* 预置变量 ******************************/
 @navHeight: 50px;
 @activeColor: #C00;
 @hoverColor: #C00;
 @border-color: #C00;
 @normal-color: #333;
+@textHover: #C00;
 .transition(@transitionTime) {
   transition: all @transitionTime ease-out;
   -webkit-transition: all @transitionTime ease-out;
   -moz-transition: all @transitionTime ease-out;;
 }
-
 .border-bottom(@color) {
-  border-bottom: 2px solid @color
+  border-bottom: 3px solid @color
 }
-
 .pd10 {
   padding: 10px 0;
 }
-
 .pd20 {
   padding: 20px 0;
 }
-
+.pd30 {
+  padding: 30px 0;
+}
 .pd40 {
   padding: 40px 0;
 }
-
 .mg5 {
   margin: 5px 0;
 }
-
 .mg10 {
   margin: 10px 0;
 }
-
 .mg20 {
   margin: 20px 0;
 }
-
 .mg40 {
   margin: 40px 0;
 }
-
 .textInfo {
-  font-size: 16px;
-  line-height: 150%;
+  font-size: 18px;
+  line-height: 2;
   text-align: justify;
 }
-
-/***** 预制变量 end******/
-
-/***** 预制类******/
 .affix-top {
   position: absolute;
 }
+.normalLink{
+  display: inline-block;
+  color:#333;
+  text-decoration: none;
+}
+.normalLink:link, .normalLink:visited, .normalLink:hover, .normalLink:focus,.normalLink:active{
+  color:#333;
+  text-decoration: none;
+}
 
-/***** 预制类 end******/
+//动画显示速度
+.fast {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+.slow {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+}
+.reallyslow {
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
 
-/***** 轮播图 ******/
+/************************* 轮播图 ******************************/
 #myCarousel {
   &, .item {
-    //max-height: 650px;
+    max-height: 800px;
+    z-index:-20
   }
-  img{
+  img {
     width: 100%;
   }
-  .carousel-inner{
-    height:100%;
+  .carousel-inner {
+    //height:100%;
   }
   .carousel-control {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
   }
 }
 
-/***** 轮播图 end *****/
-
+/************************* 导航 ******************************/
 .affix {
   top: 0;
 }
-
-/***** 导航 ******/
 header {
+  position: absolute;
   width: 100% !important;
   height: @navHeight;
   z-index: 10000;
@@ -173,15 +187,22 @@ header {
         background: none;
         border: none;
       }
+      a:active{
+        background: none;
+      }
       a:hover {
         color: @hoverColor;;
         background: none;
-        .transition(0.3s)
+        .transition(0.5s)
       }
-      .active a {
+      .active a{
         background: none;
         color: @hoverColor;
         &:hover {
+          background: none;
+          color: @hoverColor;
+        }
+        &:focus{
           background: none;
           color: @hoverColor;
         }
@@ -190,65 +211,453 @@ header {
   }
 }
 
-/***** 导航 end******/
 
-/***** 主体 ******/
-#aboutPeWrap {
-  color: @normal-color;
-  &:hover, &:active {
-    color: @normal-color;
-    text-decoration: none;
-  }
-  cursor: pointer;
+/************************* 首页 ******************************/
+body {
+  background: #f2f2f2;
 }
-
-section#about-PE {
-  background: #e7e7e7;
-  > div.container {
-    padding-top: 100px;
+/******** 关于品意 ******/
+#about-PE {
+  padding-top: 100px;
+  >a{
+    display: block;
   }
   .intro {
+    text-align: center;
     h2 {
-      width: 180px;
-      margin: 0 auto;
-      .border-bottom(@border-color);
-      .pd10;
-    }
-    a {
       display: inline-block;
-      .pd20;
+      .border-bottom(@border-color);
+      padding:10px 20px;
+    }
+    p {
+      display: inline-block;
+      margin-top: 20px;
+      .pd30;
       .textInfo
     }
   }
-  .service {
-    & > div {
-      .mg20;
-      .service-title {
-        .mg5;
-        padding: 0;
-        h3 {
-          .pd10;
-        }
-        &:hover {
-          i {
-            color: @activeColor
-          }
-        }
-      }
-      .service-content {
-        .mg5;
-        padding: 0;
-        cursor: pointer;
-        p {
-          .textInfo;
-          span:hover {
-            .border-bottom(#999)
-          }
-
-        }
+  .service-title {
+    margin-top:50px ;
+    .normalLink;
+    cursor: pointer;
+    h3 {
+      .pd20;
+    }
+    &:hover{
+      i {
+        color: @activeColor
       }
     }
-
+    p{
+      margin-top: 20px;
+      line-height:1.5;
+      text-align: justify;
+    }
   }
+}
+/******** 案例展示 ******/
+#case{
+  padding-top:100px;
+  .intro {
+    text-align: center;
+    margin-bottom : 30px;
+    p {
+      display: inline-block;
+      margin-top: 20px;
+      .pd30;
+      .textInfo
+    }
+    h2{
+      display: inline-block;
+      .border-bottom(@border-color);
+      padding:10px 20px;
+    }
+  }
+  .items-nav{
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+      margin:0 20px 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .active{
+      color:@activeColor
+    }
+  }
+  .items{
+    width: 100%;
+    .item{
+      position: relative;
+      float:left;
+      padding:0;
+      overflow: hidden;
+      //width: 25%;
+      a{
+        display: inline-block;
+        width: 100%;
+        height:100%;
+      }
+    }
+    .item img{
+      width: 100%;
+      vertical-align: middle;
+      transition: all 0.5s ease-in-out;
+      -o-transition:all 0.5s ease-in-out;
+      -moz-transition:all 0.5s ease-in-out;
+      -webkit-transition:all 0.5s ease-in-out;
+    }
+    .item:hover img{
+      transform: scale(1.1, 1.1);
+      -o-transform:scale(1.1, 1.1);
+      -moz-transform:scale(1.1, 1.1);
+      -webkit-transform:scale(1.1, 1.1);
+    }
+    .work-title{
+      display: none;
+      position: absolute;
+      left:20px;
+      bottom:20px;
+      color:#ddd;
+      font-size: 26px;
+      z-index: 20;
+    }
+    .overlay{
+      display: none;
+      position: absolute;
+      left:0;
+      top:0;
+      width: 100%;
+      height:100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 19;
+    }
+    .new .new-work{
+      display: inline-block;
+    }
+    .new-work{
+      display: none;
+      position: absolute;
+      right:5px;
+      top:5px;
+      width: 50px;
+      height:50px;
+      line-height:50px;
+      text-align: center;
+      color:#fff;
+      font-size: 18px;
+      background: #FF0000;
+      z-index: 500;
+    }
+  }
+}
+/******** 加入我们 ******/
+#joinUs {
+  padding-top: 100px;
+  .intro {
+    text-align: center;
+    h2{
+      display: inline-block;
+      .border-bottom(@border-color);
+      padding:10px 20px;
+    }
+    .joinUs-content {
+      display: inline-block;
+      margin-top: 20px;
+      .pd30;
+      p{
+        .textInfo;
+        margin:10px 0;
+      }
+    }
+  }
+  .designer{
+    .img-wrap{
+      overflow: hidden;
+    }
+    img{
+      width: 100%;
+      vertical-align: middle;
+      transition: all 0.3s ease-in-out;
+      -o-transition:all 0.3s ease-in-out;
+      -moz-transition:all 0.3s ease-in-out;
+      -webkit-transition:all 0.3s ease-in-out;
+    }
+    h3{
+      padding-top:15px;
+      color:#333;
+    }
+    h4{
+      padding:15px 0;
+      color:#000;
+    }
+    p{
+      padding-top:10px;
+      text-align: center;
+      font-size:18px;
+      line-height:1.5;
+      color:#000;
+      border-top:1px solid @border-color;
+    }
+    img:hover {
+      transform: scale(1.2, 1.2);
+      -o-transform:scale(1.2, 1.2);
+      -moz-transform:scale(1.2, 1.2);
+      -webkit-transform:scale(1.2, 1.2);
+    }
+    a{
+      margin:15px 0;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+  }
+}
+/******** 联系我们 ******/
+#contactUs {
+  position: relative;
+  padding-top: 100px;
+  background: url("../img/cover/contact.jpg") no-repeat center center;
+  background-size: cover;
+  font-size: 18px;
+  .intro {
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+      display: inline-block;
+      .border-bottom(@border-color);
+      padding: 10px 20px;
+      color:#fff;
+    }
+  }
+  .contact{
+    margin-top:220px;
+    .contactContent{
+      i{
+        color:#fff;
+      }
+      h4{
+        margin:20px auto 0;
+        color:#fff;
+        font-size:18px;
+        text-align: center;
+      }
+    }
+  }
+  .QRCode{
+    img{
+      width: 72px;
+      height:72px;
+    }
+    p{
+      color:#fff;
+      margin-top:5px;
+    }
+  }
+}
+/************************* 关于品意page ******************************/
+.footer{
+  position:absolute;
+  left:50%;
+  bottom:5px;
+  transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width:100%;
+  padding-top:5px;
+  color:#fff;
+  font-size: 14px;
+  border-top: 1px solid #999;
+  .footer-content{
+    margin:3px 0;
+    span{
+      margin:0 5px
+    }
+  }
+}
+/************************* 关于品意page ******************************/
+#aboutPePage{
+  min-height:100%;
+  a:active{
+    background: none;
+  }
+  a:hover {
+    color: @hoverColor;;
+    background: none;
+    .transition(0.5s)
+  }
+  .active a{
+    background: none;
+    color: @hoverColor;
+    &:hover {
+      background: none;
+      color: @hoverColor;
+    }
+    &:focus{
+      background: none;
+      color: @hoverColor;
+    }
+  }
+  #about-PE{
+    padding-top:0;
+    > div.container {
+      padding-top: 50px;
+      .intro p {
+        padding-bottom:0;
+      }
+    }
+  }
+  .service-title{
+    h3{
+      padding:10px 0 ;
+    }
+  }
+  .service-content{
+    text-align: justify;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .service-content p:first-child:hover{
+    color:@textHover;
+    .transition(0.3s)
+  }
+  .servieText{
+    margin-top: 10px;
+  }
+}
 
+/************************* 案例展示page ******************************/
+#casePage{
+  min-height:100%;
+  a:active{
+    background: none;
+  }
+  a:hover {
+    color: @hoverColor;;
+    background: none;
+    .transition(0.5s)
+  }
+  .active a{
+    background: none;
+    color: @hoverColor;
+    &:hover {
+      background: none;
+      color: @hoverColor;
+    }
+    &:focus{
+      background: none;
+      color: @hoverColor;
+    }
+  }
+  #case{
+    padding-top:0;
+    > div.container {
+      padding-top: 50px;
+      .intro p {
+        padding-bottom:50px;
+      }
+    }
+  }
+}
+/************************* 加入我们page ******************************/
+#joinUsPage{
+  min-height:100%;
+  a:active{
+    background: none;
+  }
+  a:hover {
+    color: @hoverColor;;
+    background: none;
+    .transition(0.5s)
+  }
+  .active a{
+    background: none;
+    color: @hoverColor;
+    &:hover {
+      background: none;
+      color: @hoverColor;
+    }
+    &:focus{
+      background: none;
+      color: @hoverColor;
+    }
+  }
+  #joinUs{
+    padding-top:0;
+    padding-bottom: 50px;
+    > div.container {
+      padding-top: 50px;
+      .intro p {
+        padding-bottom:50px;
+      }
+    }
+  }
+  .designer{
+    margin-top: 50px;
+    p{
+
+    }
+    h3{
+      padding-top:10px;
+      color:#333;
+    }
+    h4{
+      padding:10px 0;
+      color:#000;
+    }
+    .designer-title{
+      p{
+        padding-top:10px;
+        font-size:18px;
+        line-height:1.5;
+        color:#000;
+      }
+    }
+    .designer-content{
+      cursor: pointer;
+      p{
+        margin-bottom: 10px;
+        padding: 0 10px;
+        line-height:2;
+        border:none;
+        text-align: justify;
+      }
+      p:hover{
+        color:@textHover;
+        .transition(0.3s)
+      }
+      //p:first-child:hover{
+      //  color:@textHover;
+      //  .transition(0.3s)
+      //}
+      .designerIntro{
+        margin-top: 10px;
+      }
+      .designerIntro:hover{
+        color:#000;
+      }
+    }
+  }
+}
+//-----------------媒体查询--------------------------
+//主页联系我们
+@media (max-width: 768px){
+  #contactUs .contact{
+    margin-top:40px;
+    margin-bottom:140px;
+  }
+  #contactUs .contactContent{
+    margin:15px 0;
+  }
+  #contactUs .footer{
+    span{
+      font-size: 12px;
+      margin:2px 0;
+    }
+    .footer-content>span:last-child{
+      display: block
+    }
+  }
 }
