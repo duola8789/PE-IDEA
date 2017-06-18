@@ -1,6 +1,13 @@
-// /**
-//  * Created by JESSIEJOE on 2017/4/4.
-//  */
+/**
+ * Created by JESSIEJOE on 2017/4/4.
+ */
+// TODO : 加载效果
+// TODO : 更换CDN，备份CDN
+// TODO : 字体（压缩）
+// TODO : 针对手机优化
+// TODO : readMe说明
+// TODO : 确认需求
+
 var $myCarousel1 = $('#myCarousel'),
   $myHeader = $("#myHeader");
 var $body = $("html body");
@@ -46,16 +53,14 @@ $(function () {
     $(document).triggerHandler('scroll')
   });
 
-  var firstClick = true;
   // 点击导航定位到锚点的动画效果
   $("#example-navbar-collapse").find('a').click(function () {
     $body.animate({
-      scrollTop: $($(this).attr("href")).offset().top  + "px"
+      scrollTop: $($(this).attr("href")).offset().top + "px"
     }, {
       duration: 500,
       easing: "swing"
     });
-    firstClick = false;
     return false;
   });
 
@@ -65,9 +70,9 @@ $(function () {
 
   // 设置轮播图高度
   $myCarousel1.css({
-    'max-height': $(window).height()-50
+    'max-height': $(window).height() - 50
   }).find('.item').css({
-    'max-height': $(window).height()-50
+    'max-height': $(window).height() - 50
   });
 
   // 案例显示效果

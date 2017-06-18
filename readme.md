@@ -1,7 +1,7 @@
 ## PE-IEDA
 The website for PE-IDEA industry design company which is established by my ex-colleagues.
 
-需要增加的效果有：
+需要确认的东西
 
 1. 加载效果
 2. 字体
@@ -26,6 +26,7 @@ The website for PE-IDEA industry design company which is established by my ex-co
 11. 点击导航后平滑滚动到锚点的代码
 12. jquery.aniview.min.js
 13. hover抖动问题（所有案例）父元素增加position absolute
+14. isotope.pkgd.min.js和imagesloaded的是使用
 
 提供的尺寸：
 1. 浏览器标题栏前的图标128X128，格式为ico

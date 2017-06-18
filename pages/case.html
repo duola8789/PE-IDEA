@@ -3,7 +3,7 @@
 <head lang="zh-CN">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="../dist/ico/favicon.ico">
   <title>案例展示丨PE-IDEA</title>
   <link href="//lib.baomitu.com/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -39,8 +39,8 @@
               <li><a href="../index.html">HOME</a></li>
               <li><a href="about_PE.html">关于品意<span class="visible-xs-inline visible-lg-inline">丨ABOUT PE-IDEA</span></a></li>
               <li  class="active"><a href="case.html">案例展示<span class="visible-xs-inline visible-lg-inline">丨CASE Show</span></a></li>
-              <li><a href="#">加入我们<span class="visible-xs-inline visible-lg-inline">丨Join US</span></a></li>
-              <li><a href="#">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
+              <li><a href="join_us.html">加入我们<span class="visible-xs-inline visible-lg-inline">丨Join US</span></a></li>
+              <li><a href="case.html">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
             </ul>
           </div>
         </div>
@@ -60,60 +60,277 @@
     </div>
     <div class="row service">
       <div class="col-sm-12 col-xs-12 service-title text-center aniview slow" av-animation="fadeInRight">
-        <ul class="items-nav col-sm-12 col-xs-6">
-          <li class="active"><span>所有案例</span></li>
-          <li><span>产品设计</span></li>
-          <li><span>品牌形象</span></li>
-          <li><span>合作开发</span></li>
-        </ul>
+          <ul id='items-nav' class="items-nav col-sm-12 col-xs-6">
+            <li class="all active" data-filter="item"><span>所有案例</span></li>
+            <li class="product" data-filter="product"><span>产品设计</span></li>
+            <li class="brand" data-filter="brand"><span>品牌形象</span></li>
+            <li class="cooperate" data-filter="cooperate"><span>合作开发</span></li>
+          </ul>
+        <div id="navInside">
+          <ul id="productNav" class="inside-nav col-xs-12">
+            <li data-filter="productDigital">消费数码</li>
+            <li data-filter="productMedical">医疗健康</li>
+            <li data-filter="productHandy">专用手持备</li>
+            <li data-filter="productIndustry">工业设备</li>
+          </ul>
+          <ul id="brandNav" class="inside-nav col-xs-12">
+            <li data-filter="brandCompany">企业形象</li>
+            <li data-filter="brandPackage">包装创意</li>
+            <li data-filter="brandPrint">平面宣传</li>
+          </ul>
+        </div>
         <ul class="items">
-          <!--<li class="item branding item-design new">-->
-            <!--<a href="#">-->
-              <!--<img src="dist/img/work/1.jpg" alt="">-->
-              <!--<span class="work-title">work1</span>-->
-              <!--<div class="overlay"></div>-->
-              <!--<div class="new-work">NEW</div>-->
-            <!--</a>-->
-          <!--</li>-->
-          <!--<li class="item branding item-design new">-->
-            <!--<a href="#">-->
-              <!--<img src="dist/img/work/2.jpg" alt="">-->
-              <!--<span class="work-title">work2</span>-->
-              <!--<div class="overlay"></div>-->
-              <!--<div class="new-work">NEW</div>-->
-            <!--</a>-->
-          <!--</li>-->
-          <!--<li class="item branding item-design new">-->
-            <!--<a href="#">-->
-              <!--<img src="dist/img/work/3.jpg" alt="">-->
-              <!--<span class="work-title">work3</span>-->
-              <!--<div class="overlay"></div>-->
-              <!--<div class="new-work">NEW</div>-->
-            <!--</a>-->
-          <!--</li>-->
-          <!--<li class="item branding item-design new">-->
-            <!--<a href="#">-->
-              <!--<img src="dist/img/work/4.jpg" alt="">-->
-              <!--<span class="work-title">work4</span>-->
-              <!--<div class="overlay"></div>-->
-              <!--<div class="new-work">NEW</div>-->
-            <!--</a>-->
-          <!--</li>-->
-          <!--<li class="item branding item-design new">-->
-            <!--<a href="#">-->
-              <!--<img src="dist/img/work/5.jpg" alt="">-->
-              <!--<span class="work-title">work5</span>-->
-              <!--<div class="overlay"></div>-->
-              <!--<div class="new-work">NEW</div>-->
-            <!--</a>-->
-          <!--</li>-->
+          <li class="col-xs-12 col-sm-3 item item-design allCase init product productDigital new">
+            <a href="#">
+              <img src="../dist/img/work/1.jpg" alt="">
+              <span class="work-title">work1</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item init item-design brand brandCompany new">
+            <a href="#">
+              <img src="../dist/img/work/2.jpg" alt="">
+              <span class="work-title">work2</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item init item-design product productMedical new">
+            <a href="#">
+              <img src="../dist/img/work/3.jpg" alt="">
+              <span class="work-title">work3</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 init item item-design product productDigital new">
+            <a href="#">
+              <img src="../dist/img/work/4.jpg" alt="">
+              <span class="work-title">work4</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 init item item-design product productHandy new">
+            <a href="#">
+              <img src="../dist/img/work/5.jpg" alt="">
+              <span class="work-title">work5</span>
+              <div class="overlay">123</div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 init item item-design product productIndustry new">
+            <a href="../pages/design_example/example6.html">
+              <img src="../dist/img/work/6.jpg" alt="">
+              <span class="work-title">work6</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 init item item-design brand brandCompany new">
+            <a href="../pages/design_example/example7.html">
+              <img src="../dist/img/work/7.jpg" alt="">
+              <span class="work-title">work7</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 init item item-design brand brandPrint">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productMedical">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productMedical" >
+          <a href="../pages/design_example/example8.html">
+            <img src="../dist/img/work/8.jpg" alt="">
+            <span class="work-title">work8</span>
+            <div class="overlay"></div>
+            <div class="new-work">NEW</div>
+          </a>
+        </li>
+          <li class="col-xs-12 col-sm-3 item item-design">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productHandy">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li> <li class="col-xs-12 col-sm-3 item item-design product productHandy">
+          <a href="../pages/design_example/example8.html">
+            <img src="../dist/img/work/8.jpg" alt="">
+            <span class="work-title">work8</span>
+            <div class="overlay"></div>
+            <div class="new-work">NEW</div>
+          </a>
+        </li> <li class="col-xs-12 col-sm-3 item item-design product productHandy">
+          <a href="../pages/design_example/example8.html">
+            <img src="../dist/img/work/8.jpg" alt="">
+            <span class="work-title">work8</span>
+            <div class="overlay"></div>
+            <div class="new-work">NEW</div>
+          </a>
+        </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productDigital">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productDigital">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design brand brandPrint">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design brand brandCompany">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productIndustry">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design product productIndustry">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design cooperate">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design brand brandPackage">
+            <a href="../pages/design_example/example8.html">
+              <img src="../dist/img/work/8.jpg" alt="">
+              <span class="work-title">work8</span>
+              <div class="overlay"></div>
+              <div class="new-work">NEW</div>
+            </a>
+          </li>
+          <li class="col-xs-12 col-sm-3 item item-design brand brandCompany">
+          <a href="../pages/design_example/example8.html">
+            <img src="../dist/img/work/8.jpg" alt="">
+            <span class="work-title">work8</span>
+            <div class="overlay"></div>
+            <div class="new-work">NEW</div>
+          </a>
+        </li>
         </ul>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+        <div class="relative">
+          <div id="moreCases" class="relativeTitle"><p> + 更多案例</p></div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <a id="backToTop" href="#casePage">
+    <i class="fa fa-angle-up fa-2x animated"></i>
+  </a>
 </section>
 <script src="//lib.baomitu.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="//lib.baomitu.com/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../dist/scripts/pe3.min.js"></script>
+<script type="text/javascript" src="../dist/scripts/jquery.aniview.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.imagesloaded/4.1.3/imagesloaded.min.js"></script>
+<script type="text/javascript" src="../dist/scripts/pe4.min.js"></script>
 </body>
 </html>

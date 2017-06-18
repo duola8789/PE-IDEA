@@ -39,8 +39,8 @@
               <li><a href="../index.html">HOME</a></li>
               <li class="active"><a href="about_PE.html">关于品意<span class="visible-xs-inline visible-lg-inline">丨ABOUT PE-IDEA</span></a></li>
               <li><a href="case.html">案例展示<span class="visible-xs-inline visible-lg-inline">丨CASE Show</span></a></li>
-              <li><a href="#">加入我们<span class="visible-xs-inline visible-lg-inline">丨Join US</span></a></li>
-              <li><a href="#">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
+              <li><a href="join_us.html">加入我们<span class="visible-xs-inline visible-lg-inline">丨Join US</span></a></li>
+              <li><a href="case.html">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
             </ul>
           </div>
         </div>
@@ -135,6 +135,15 @@
 </section>
 <script src="//lib.baomitu.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="//lib.baomitu.com/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../dist/scripts/pe2.min.js"></script>
+<script>
+  $(function(){
+    // 增加图标抖动动画类
+    $(".service-title").hover(function () {
+      $(this).find('i').addClass('pulse')
+    }, function () {
+      $(this).find('i').removeClass('pulse')
+    });
+  });
+</script>
 </body>
 </html>

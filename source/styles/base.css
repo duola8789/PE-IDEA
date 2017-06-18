@@ -84,7 +84,6 @@ video {
   border: 0;
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -194,10 +193,14 @@ h4 {
   animation-delay: 1s;
 }
 /************************* 轮播图 ******************************/
+#myCarousel {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
 #myCarousel,
 #myCarousel .item {
   max-height: 800px;
-  z-index: -20;
 }
 #myCarousel img {
   width: 100%;
@@ -265,7 +268,7 @@ body {
 }
 /******** 关于品意 ******/
 #about-PE {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 #about-PE > a {
   display: block;
@@ -280,14 +283,13 @@ body {
 }
 #about-PE .intro p {
   display: inline-block;
-  margin-top: 20px;
-  padding: 30px 0;
+  padding: 20px 0;
   font-size: 18px;
   line-height: 2;
   text-align: justify;
 }
 #about-PE .service-title {
-  margin-top: 50px ;
+  margin-top: 30px;
   display: inline-block;
   color: #333;
   text-decoration: none;
@@ -300,22 +302,21 @@ body {
   color: #C00;
 }
 #about-PE .service-title p {
-  margin-top: 20px;
+  padding: 20px 0;
   line-height: 1.5;
   text-align: justify;
 }
 /******** 案例展示 ******/
 #case {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 #case .intro {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #case .intro p {
   display: inline-block;
   margin-top: 20px;
-  padding: 30px 0;
   font-size: 18px;
   line-height: 2;
   text-align: justify;
@@ -404,7 +405,7 @@ body {
 }
 /******** 加入我们 ******/
 #joinUs {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 #joinUs .intro {
   text-align: center;
@@ -416,14 +417,13 @@ body {
 }
 #joinUs .intro .joinUs-content {
   display: inline-block;
-  margin-top: 20px;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 #joinUs .intro .joinUs-content p {
   font-size: 18px;
   line-height: 2;
   text-align: justify;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 #joinUs .designer .img-wrap {
   overflow: hidden;
@@ -467,7 +467,7 @@ body {
 /******** 联系我们 ******/
 #contactUs {
   position: relative;
-  padding-top: 100px;
+  padding-top: 80px;
   background: url("../img/cover/contact.jpg") no-repeat center center;
   background-size: cover;
   font-size: 18px;
@@ -483,7 +483,7 @@ body {
   color: #fff;
 }
 #contactUs .contact {
-  margin-top: 220px;
+  margin-top: 160px;
 }
 #contactUs .contact .contactContent i {
   color: #fff;
@@ -502,7 +502,7 @@ body {
   color: #fff;
   margin-top: 5px;
 }
-/************************* 关于品意page ******************************/
+/************************* footer ******************************/
 .footer {
   position: absolute;
   left: 50%;
@@ -550,16 +550,25 @@ body {
   color: #C00;
 }
 #aboutPePage #about-PE {
-  padding-top: 0;
+  padding-top: 30px;
 }
 #aboutPePage #about-PE > div.container {
   padding-top: 50px;
 }
+#aboutPePage #about-PE > div.container .intro {
+  margin-bottom: 40px;
+}
 #aboutPePage #about-PE > div.container .intro p {
   padding-bottom: 0;
 }
+#aboutPePage .service {
+  margin: 25px 0;
+}
+#aboutPePage .service-title {
+  margin-top: 0;
+}
 #aboutPePage .service-title h3 {
-  padding: 10px 0 ;
+  padding: 10px 0;
 }
 #aboutPePage .service-content {
   text-align: justify;
@@ -602,13 +611,55 @@ body {
   color: #C00;
 }
 #casePage #case {
-  padding-top: 0;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 #casePage #case > div.container {
   padding-top: 50px;
 }
-#casePage #case > div.container .intro p {
-  padding-bottom: 50px;
+#casePage #case .intro {
+  margin-bottom: 30px;
+}
+#casePage #moreCases,
+#casePage #lessCases {
+  display: none;
+}
+#casePage .relativeTitle {
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  background: #666;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+#casePage .relativeContent {
+  display: inline-block;
+  padding: 0;
+}
+#casePage .relativeContent img {
+  width: 100%;
+}
+#casePage .items {
+  margin-top: 50px;
+}
+#casePage .items-nav {
+  float: none;
+}
+#casePage .inside-nav {
+  display: none;
+  float: none;
+  width: 100%;
+  margin-top: -15px;
+  text-align: center;
+}
+#casePage .inside-nav li {
+  display: inline-block;
+  margin: 0 20px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+#casePage .inside-nav .active {
+  color: #C00;
 }
 /************************* 加入我们page ******************************/
 #joinUsPage {
@@ -684,6 +735,61 @@ body {
 }
 #joinUsPage .designer .designer-content .designerIntro:hover {
   color: #000;
+}
+#examplePage {
+  position: relative;
+}
+#examplePage header {
+  position: fixed;
+}
+#examplePage #example {
+  padding-top: 50px;
+}
+#examplePage #example .example-image img {
+  width: 100%;
+}
+#examplePage #example .example-content {
+  padding: 50px 50px 30px;
+  color: #1a85c6;
+  background: #D3D3D3;
+}
+#examplePage #example .example-content h3 {
+  margin: 30px 0 15px;
+  color: #666;
+  font-weight: bold;
+}
+#examplePage #example .example-content p {
+  margin: 5px 0;
+  color: #333;
+  text-align: justify;
+  line-height: 1.3;
+}
+#examplePage .relativeTitle {
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  background: #666;
+  letter-spacing: 3px;
+}
+#examplePage .relativeContent {
+  display: inline-block;
+  padding: 0;
+}
+#examplePage .relativeContent img {
+  width: 100%;
+}
+#backToTop {
+  position: fixed;
+  right: 6%;
+  bottom: 30px;
+  display: inline-block;
+  padding: 0 5px;
+  color: #D3D3D3;
+  background: #1a85c6;
+}
+#backToTop:hover {
+  color: #D3D3D3 !important;
+  background: #082b40 !important;
 }
 @media (max-width: 768px) {
   #contactUs .contact {

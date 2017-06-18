@@ -17,30 +17,36 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 //a {
 //  color: @normal-color;
 //  text-decoration: none;
@@ -50,23 +56,25 @@ table {
 //  color: @normal-color;
 //  text-decoration: none;
 //}
-h2{
-  font-size:24px;
+h2 {
+  font-size: 24px;
 }
-h3{
-  font-size:18px;
+
+h3 {
+  font-size: 18px;
 }
-h4{
-  font-size:16px;
+
+h4 {
+  font-size: 16px;
 }
-@media (min-width: 1200px){
+
+@media (min-width: 1200px) {
   .container {
     width: 1270px;
   }
 }
 
 /***** reset end******/
-
 
 /************************* 预置变量 ******************************/
 @navHeight: 50px;
@@ -80,48 +88,61 @@ h4{
   -webkit-transition: all @transitionTime ease-out;
   -moz-transition: all @transitionTime ease-out;;
 }
+
 .border-bottom(@color) {
   border-bottom: 3px solid @color
 }
+
 .pd10 {
   padding: 10px 0;
 }
+
 .pd20 {
   padding: 20px 0;
 }
+
 .pd30 {
   padding: 30px 0;
 }
+
 .pd40 {
   padding: 40px 0;
 }
+
 .mg5 {
   margin: 5px 0;
 }
+
 .mg10 {
   margin: 10px 0;
 }
+
 .mg20 {
   margin: 20px 0;
 }
+
 .mg40 {
   margin: 40px 0;
 }
+
 .textInfo {
   font-size: 18px;
   line-height: 2;
   text-align: justify;
 }
+
 .affix-top {
   position: absolute;
 }
-.normalLink{
+
+.normalLink {
   display: inline-block;
-  color:#333;
+  color: #333;
   text-decoration: none;
 }
-.normalLink:link, .normalLink:visited, .normalLink:hover, .normalLink:focus,.normalLink:active{
-  color:#333;
+
+.normalLink:link, .normalLink:visited, .normalLink:hover, .normalLink:focus, .normalLink:active {
+  color: #333;
   text-decoration: none;
 }
 
@@ -130,10 +151,12 @@ h4{
   animation-duration: 1s;
   animation-delay: 0s;
 }
+
 .slow {
   animation-duration: 2s;
   animation-delay: 0.5s;
 }
+
 .reallyslow {
   animation-duration: 3s;
   animation-delay: 1s;
@@ -141,9 +164,11 @@ h4{
 
 /************************* 轮播图 ******************************/
 #myCarousel {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   &, .item {
     max-height: 800px;
-    z-index:-20
   }
   img {
     width: 100%;
@@ -163,6 +188,7 @@ h4{
 .affix {
   top: 0;
 }
+
 header {
   position: absolute;
   width: 100% !important;
@@ -187,7 +213,7 @@ header {
         background: none;
         border: none;
       }
-      a:active{
+      a:active {
         background: none;
       }
       a:hover {
@@ -195,14 +221,14 @@ header {
         background: none;
         .transition(0.5s)
       }
-      .active a{
+      .active a {
         background: none;
         color: @hoverColor;
         &:hover {
           background: none;
           color: @hoverColor;
         }
-        &:focus{
+        &:focus {
           background: none;
           color: @hoverColor;
         }
@@ -211,15 +237,15 @@ header {
   }
 }
 
-
 /************************* 首页 ******************************/
 body {
   background: #f2f2f2;
 }
+
 /******** 关于品意 ******/
 #about-PE {
-  padding-top: 100px;
-  >a{
+  padding-top: 80px;
+  > a {
     display: block;
   }
   .intro {
@@ -227,197 +253,197 @@ body {
     h2 {
       display: inline-block;
       .border-bottom(@border-color);
-      padding:10px 20px;
+      padding: 10px 20px;
     }
     p {
       display: inline-block;
-      margin-top: 20px;
-      .pd30;
+      .pd20;
       .textInfo
     }
   }
   .service-title {
-    margin-top:50px ;
+    margin-top: 30px;
     .normalLink;
     cursor: pointer;
     h3 {
       .pd20;
     }
-    &:hover{
+    &:hover {
       i {
         color: @activeColor
       }
     }
-    p{
-      margin-top: 20px;
-      line-height:1.5;
+    p {
+      .pd20;
+      line-height: 1.5;
       text-align: justify;
     }
   }
 }
+
 /******** 案例展示 ******/
-#case{
-  padding-top:100px;
+#case {
+  padding-top: 80px;
   .intro {
     text-align: center;
-    margin-bottom : 30px;
+    margin-bottom: 20px;
     p {
       display: inline-block;
       margin-top: 20px;
-      .pd30;
       .textInfo
     }
-    h2{
+    h2 {
       display: inline-block;
       .border-bottom(@border-color);
-      padding:10px 20px;
+      padding: 10px 20px;
     }
   }
-  .items-nav{
+  .items-nav {
     width: 100%;
     text-align: center;
-    li{
+    li {
       display: inline-block;
-      margin:0 20px 30px;
+      margin: 0 20px 30px;
       font-size: 18px;
       cursor: pointer;
     }
-    .active{
-      color:@activeColor
+    .active {
+      color: @activeColor
     }
   }
-  .items{
+  .items {
     width: 100%;
-    .item{
+    .item {
       position: relative;
-      float:left;
-      padding:0;
+      float: left;
+      padding: 0;
       overflow: hidden;
       //width: 25%;
-      a{
+      a {
         display: inline-block;
         width: 100%;
-        height:100%;
+        height: 100%;
       }
     }
-    .item img{
+    .item img {
       width: 100%;
       vertical-align: middle;
       transition: all 0.5s ease-in-out;
-      -o-transition:all 0.5s ease-in-out;
-      -moz-transition:all 0.5s ease-in-out;
-      -webkit-transition:all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
     }
-    .item:hover img{
+    .item:hover img {
       transform: scale(1.1, 1.1);
-      -o-transform:scale(1.1, 1.1);
-      -moz-transform:scale(1.1, 1.1);
-      -webkit-transform:scale(1.1, 1.1);
+      -o-transform: scale(1.1, 1.1);
+      -moz-transform: scale(1.1, 1.1);
+      -webkit-transform: scale(1.1, 1.1);
     }
-    .work-title{
+    .work-title {
       display: none;
       position: absolute;
-      left:20px;
-      bottom:20px;
-      color:#ddd;
+      left: 20px;
+      bottom: 20px;
+      color: #ddd;
       font-size: 26px;
       z-index: 20;
     }
-    .overlay{
+    .overlay {
       display: none;
       position: absolute;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
       width: 100%;
-      height:100%;
-      background: rgba(0,0,0,0.5);
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
       z-index: 19;
     }
-    .new .new-work{
+    .new .new-work {
       display: inline-block;
     }
-    .new-work{
+    .new-work {
       display: none;
       position: absolute;
-      right:5px;
-      top:5px;
+      right: 5px;
+      top: 5px;
       width: 50px;
-      height:50px;
-      line-height:50px;
+      height: 50px;
+      line-height: 50px;
       text-align: center;
-      color:#fff;
+      color: #fff;
       font-size: 18px;
       background: #FF0000;
       z-index: 500;
     }
   }
 }
+
 /******** 加入我们 ******/
 #joinUs {
-  padding-top: 100px;
+  padding-top: 80px;
   .intro {
     text-align: center;
-    h2{
+    h2 {
       display: inline-block;
       .border-bottom(@border-color);
-      padding:10px 20px;
+      padding: 10px 20px;
     }
     .joinUs-content {
       display: inline-block;
-      margin-top: 20px;
-      .pd30;
-      p{
+      .pd20;
+      p {
         .textInfo;
-        margin:10px 0;
+        margin: 5px 0;
       }
     }
   }
-  .designer{
-    .img-wrap{
+  .designer {
+    .img-wrap {
       overflow: hidden;
     }
-    img{
+    img {
       width: 100%;
       vertical-align: middle;
       transition: all 0.3s ease-in-out;
-      -o-transition:all 0.3s ease-in-out;
-      -moz-transition:all 0.3s ease-in-out;
-      -webkit-transition:all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
     }
-    h3{
-      padding-top:15px;
-      color:#333;
+    h3 {
+      padding-top: 15px;
+      color: #333;
     }
-    h4{
-      padding:15px 0;
-      color:#000;
+    h4 {
+      padding: 15px 0;
+      color: #000;
     }
-    p{
-      padding-top:10px;
+    p {
+      padding-top: 10px;
       text-align: center;
-      font-size:18px;
-      line-height:1.5;
-      color:#000;
-      border-top:1px solid @border-color;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #000;
+      border-top: 1px solid @border-color;
     }
     img:hover {
       transform: scale(1.2, 1.2);
-      -o-transform:scale(1.2, 1.2);
-      -moz-transform:scale(1.2, 1.2);
-      -webkit-transform:scale(1.2, 1.2);
+      -o-transform: scale(1.2, 1.2);
+      -moz-transform: scale(1.2, 1.2);
+      -webkit-transform: scale(1.2, 1.2);
     }
-    a{
-      margin:15px 0;
+    a {
+      margin: 15px 0;
     }
-    a:hover{
+    a:hover {
       text-decoration: none;
     }
   }
 }
+
 /******** 联系我们 ******/
 #contactUs {
   position: relative;
-  padding-top: 100px;
+  padding-top: 80px;
   background: url("../img/cover/contact.jpg") no-repeat center center;
   background-size: cover;
   font-size: 18px;
@@ -428,59 +454,61 @@ body {
       display: inline-block;
       .border-bottom(@border-color);
       padding: 10px 20px;
-      color:#fff;
+      color: #fff;
     }
   }
-  .contact{
-    margin-top:220px;
-    .contactContent{
-      i{
-        color:#fff;
+  .contact {
+    margin-top: 160px;
+    .contactContent {
+      i {
+        color: #fff;
       }
-      h4{
-        margin:20px auto 0;
-        color:#fff;
-        font-size:18px;
+      h4 {
+        margin: 20px auto 0;
+        color: #fff;
+        font-size: 18px;
         text-align: center;
       }
     }
   }
-  .QRCode{
-    img{
+  .QRCode {
+    img {
       width: 72px;
-      height:72px;
+      height: 72px;
     }
-    p{
-      color:#fff;
-      margin-top:5px;
+    p {
+      color: #fff;
+      margin-top: 5px;
     }
   }
 }
-/************************* 关于品意page ******************************/
-.footer{
-  position:absolute;
-  left:50%;
-  bottom:5px;
+
+/************************* footer ******************************/
+.footer {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
   transform: translateX(-50%);
   -o-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
-  width:100%;
-  padding-top:5px;
-  color:#fff;
+  width: 100%;
+  padding-top: 5px;
+  color: #fff;
   font-size: 14px;
   border-top: 1px solid #999;
-  .footer-content{
-    margin:3px 0;
-    span{
-      margin:0 5px
+  .footer-content {
+    margin: 3px 0;
+    span {
+      margin: 0 5px
     }
   }
 }
+
 /************************* 关于品意page ******************************/
-#aboutPePage{
-  min-height:100%;
-  a:active{
+#aboutPePage {
+  min-height: 100%;
+  a:active {
     background: none;
   }
   a:hover {
@@ -488,50 +516,57 @@ body {
     background: none;
     .transition(0.5s)
   }
-  .active a{
+  .active a {
     background: none;
     color: @hoverColor;
     &:hover {
       background: none;
       color: @hoverColor;
     }
-    &:focus{
+    &:focus {
       background: none;
       color: @hoverColor;
     }
   }
-  #about-PE{
-    padding-top:0;
+  #about-PE {
+    padding-top: 30px;
     > div.container {
       padding-top: 50px;
+      .intro {
+        margin-bottom: 40px;
+      }
       .intro p {
-        padding-bottom:0;
+        padding-bottom: 0;
       }
     }
   }
-  .service-title{
-    h3{
-      padding:10px 0 ;
+  .service {
+    margin: 25px 0;
+  }
+  .service-title {
+    margin-top: 0;
+    h3 {
+      padding: 10px 0;
     }
   }
-  .service-content{
+  .service-content {
     text-align: justify;
     line-height: 1.5;
     cursor: pointer;
   }
-  .service-content p:first-child:hover{
-    color:@textHover;
+  .service-content p:first-child:hover {
+    color: @textHover;
     .transition(0.3s)
   }
-  .servieText{
+  .servieText {
     margin-top: 10px;
   }
 }
 
 /************************* 案例展示page ******************************/
-#casePage{
-  min-height:100%;
-  a:active{
+#casePage {
+  min-height: 100%;
+  a:active {
     background: none;
   }
   a:hover {
@@ -539,32 +574,75 @@ body {
     background: none;
     .transition(0.5s)
   }
-  .active a{
+  .active a {
     background: none;
     color: @hoverColor;
     &:hover {
       background: none;
       color: @hoverColor;
     }
-    &:focus{
+    &:focus {
       background: none;
       color: @hoverColor;
     }
   }
-  #case{
-    padding-top:0;
+  #case {
+    padding-top: 30px;
+    padding-bottom: 50px;
     > div.container {
       padding-top: 50px;
-      .intro p {
-        padding-bottom:50px;
-      }
+    }
+    .intro {
+      margin-bottom: 30px;
+    }
+  }
+  #moreCases, #lessCases{
+    display: none;
+  }
+  .relativeTitle {
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background: #666;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+  .relativeContent {
+    display: inline-block;
+    padding: 0;
+    //margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  .items{
+    margin-top: 50px;
+  }
+  .items-nav{
+    float:none
+  }
+  .inside-nav{
+    display: none;
+    float: none;
+    width: 100%;
+    margin-top: -15px;
+    text-align: center;
+    li{
+      display: inline-block;
+      margin: 0 20px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .active {
+      color: @activeColor
     }
   }
 }
+
 /************************* 加入我们page ******************************/
-#joinUsPage{
-  min-height:100%;
-  a:active{
+#joinUsPage {
+  min-height: 100%;
+  a:active {
     background: none;
   }
   a:hover {
@@ -572,91 +650,152 @@ body {
     background: none;
     .transition(0.5s)
   }
-  .active a{
+  .active a {
     background: none;
     color: @hoverColor;
     &:hover {
       background: none;
       color: @hoverColor;
     }
-    &:focus{
+    &:focus {
       background: none;
       color: @hoverColor;
     }
   }
-  #joinUs{
-    padding-top:0;
+  #joinUs {
+    padding-top: 0;
     padding-bottom: 50px;
     > div.container {
       padding-top: 50px;
       .intro p {
-        padding-bottom:50px;
+        padding-bottom: 50px;
       }
     }
   }
-  .designer{
+  .designer {
     margin-top: 50px;
-    p{
-
+    h3 {
+      padding-top: 10px;
+      color: #333;
     }
-    h3{
-      padding-top:10px;
-      color:#333;
+    h4 {
+      padding: 10px 0;
+      color: #000;
     }
-    h4{
-      padding:10px 0;
-      color:#000;
-    }
-    .designer-title{
-      p{
-        padding-top:10px;
-        font-size:18px;
-        line-height:1.5;
-        color:#000;
+    .designer-title {
+      p {
+        padding-top: 10px;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #000;
       }
     }
-    .designer-content{
+    .designer-content {
       cursor: pointer;
-      p{
+      p {
         margin-bottom: 10px;
         padding: 0 10px;
-        line-height:2;
-        border:none;
+        line-height: 2;
+        border: none;
         text-align: justify;
       }
-      p:hover{
-        color:@textHover;
+      p:hover {
+        color: @textHover;
         .transition(0.3s)
       }
-      //p:first-child:hover{
-      //  color:@textHover;
-      //  .transition(0.3s)
-      //}
-      .designerIntro{
+      .designerIntro {
         margin-top: 10px;
       }
-      .designerIntro:hover{
-        color:#000;
+      .designerIntro:hover {
+        color: #000;
       }
     }
   }
 }
+
+//-----------------example页面--------------------------
+#examplePage {
+  position: relative;
+  header {
+    position: fixed;
+  }
+  #example {
+    padding-top: 50px;
+    .example-image {
+      //margin-top: 15px;
+      img {
+        width: 100%;
+      }
+    }
+    .example-content {
+      //margin-top: 10px;
+      padding: 50px 50px 30px;
+      color: #1a85c6;
+      background: #D3D3D3;
+      h3 {
+        margin: 30px 0 15px;
+        color: #666;
+        font-weight: bold
+      }
+      p {
+        margin: 5px 0;
+        color: #333;
+        text-align: justify;
+        line-height: 1.3
+      }
+    }
+  }
+  .relativeTitle {
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background: #666;
+    letter-spacing: 3px;
+  }
+  .relativeContent {
+    display: inline-block;
+    padding: 0;
+    //margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
+#backToTop {
+  position: fixed;
+  right: 6%;
+  bottom: 30px;
+  display: inline-block;
+  padding: 0 5px;
+  color: #D3D3D3;
+  background: #1a85c6;
+}
+
+#backToTop:hover {
+  color: #D3D3D3 !important;
+  background: #082b40 !important;
+}
+
 //-----------------媒体查询--------------------------
 //主页联系我们
-@media (max-width: 768px){
-  #contactUs .contact{
-    margin-top:40px;
-    margin-bottom:140px;
+@media (max-width: 768px) {
+  #contactUs .contact {
+    margin-top: 40px;
+    margin-bottom: 140px;
   }
-  #contactUs .contactContent{
-    margin:15px 0;
+
+  #contactUs .contactContent {
+    margin: 15px 0;
   }
-  #contactUs .footer{
-    span{
+
+  #contactUs .footer {
+    span {
       font-size: 12px;
-      margin:2px 0;
+      margin: 2px 0;
     }
-    .footer-content>span:last-child{
+    .footer-content > span:last-child {
       display: block
     }
   }
