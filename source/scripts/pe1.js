@@ -29,6 +29,20 @@ $(function () {
     $("#example-navbar-collapse").attr("aria-expanded",false);
   });
 
+  $(document).on("click", "body", function(e){
+    $('#clickBtn').addClass("collapsed");
+    $('#clickBtn').attr("aria-expanded",false);
+    $("#example-navbar-collapse").removeClass("in");
+    $("#example-navbar-collapse").attr("aria-expanded",false);
+  });
+
+  // $("#menu").on("click", function(e){
+  //   e.stopPropagation();
+  //   $('#clickBtn').remove("collapsed");
+  //   $('#clickBtn').attr("aria-expanded",true);
+  //   $("#example-navbar-collapse").addClass("in");
+  //   $("#example-navbar-collapse").attr("aria-expanded",true);
+  // });
     $myCarousel1.carousel({
     interval: 3000
   });

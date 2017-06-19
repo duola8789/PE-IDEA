@@ -1,6 +1,7 @@
 ## PE-IEDA
 The website for PE-IDEA industry design company which is established by my friends.
 
+## 
 版本：V0.1
 
 日期：2017.6.19
@@ -18,3 +19,16 @@ The website for PE-IDEA industry design company which is established by my frien
 8. 在线客服功能暂时无法添加；
 9. 网站自行维护有一定难度;
 10. 网站源码地址：https://github.com/duola8789/PE-IDEA
+
+##
+版本：V0.2
+
+日期：2017.6.20
+
+修改内容：
+1. 移动端导航栏点击空白收起
+2. 移动端导航栏点击在本页跳转后收起
+3. 二维码更换为需求方提供的真实二维码
+4. 点击导航logo能够返回首页
+5. 字体确认使用微软雅黑字体
+6. 其余需求待确定

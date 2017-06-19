@@ -15,15 +15,15 @@
   <![endif]-->
   <link type="text/css" rel="stylesheet" href="../dist/styles/base.min.css">
 </head>
-<body id="contactUsPage">
+<body id="contactUsPage" class="test">
 <div class="loader">
   <div class="fading-line"></div>
 </div>
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-sm-2 col-xs-4 col-xs-offset-1 col-lg-offset-0 logo">
-      </div>
+      <a href="../index.html" class="col-sm-2 col-xs-4 col-xs-offset-1 col-lg-offset-0 logo">
+      </a>
       <nav class="navbar navbar-default navbar-static" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -59,7 +59,7 @@
     </div>
     <div class="row contact">
       <div class="col-sm-3 col-xs-12 contactContent QRCode text-center aniview slow" av-animation="fadeInRight">
-        <img src="../dist/img/contact/QRCode.png">
+        <img src="../dist/img/contact/QRCode.jpg">
         <h4>WeChat : PE-Design</h4>
       </div>
       <div class="col-sm-3 col-xs-12 contactContent  text-center aniview slow" av-animation="fadeInRight">
@@ -95,6 +95,21 @@
   $(window).load(function () {
     $(".loader .fading-line").fadeOut();
     $(".loader").fadeOut("slow");
+  });
+
+  // 移动端导航点击后自动回收
+  $(".nav > li > a").click(function(){
+    $('#clickBtn').addClass("collapsed");
+    $('#clickBtn').attr("aria-expanded",false);
+    $("#example-navbar-collapse").removeClass("in");
+    $("#example-navbar-collapse").attr("aria-expanded",false);
+  });
+
+  $(document).on("click", "body", function(e){
+    $('#clickBtn').addClass("collapsed");
+    $('#clickBtn').attr("aria-expanded",false);
+    $("#example-navbar-collapse").removeClass("in");
+    $("#example-navbar-collapse").attr("aria-expanded",false);
   });
 
   $('.fullPage').css({

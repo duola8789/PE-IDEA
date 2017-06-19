@@ -483,6 +483,7 @@ body {
 }
 #contactUs .contact {
   margin-top: 160px;
+  cursor: default;
 }
 #contactUs .contact .contactContent i {
   color: #fff;
@@ -817,5 +818,8 @@ body {
   }
   #contactUs .footer .footer-content > span:last-child {
     display: block;
+  }
+  .test {
+    cursor: pointer;
   }
 }
