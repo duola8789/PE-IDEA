@@ -21,7 +21,15 @@ $(document).ready(function () {
 
 //首页轮播图循环时间
 $(function () {
-  $myCarousel1.carousel({
+  // 移动端导航点击后自动回收
+  $(".nav > li > a").click(function(){
+    $('#clickBtn').addClass("collapsed");
+    $('#clickBtn').attr("aria-expanded",false);
+    $("#example-navbar-collapse").removeClass("in");
+    $("#example-navbar-collapse").attr("aria-expanded",false);
+  });
+
+    $myCarousel1.carousel({
     interval: 3000
   });
 
