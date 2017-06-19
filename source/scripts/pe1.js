@@ -1,12 +1,11 @@
 /**
  * Created by JESSIEJOE on 2017/4/4.
  */
-// TODO : 加载效果
-// TODO : 更换CDN，备份CDN
-// TODO : 字体（压缩）
-// TODO : 针对手机优化
-// TODO : readMe说明
-// TODO : 确认需求
+
+$(window).load(function () {
+  $(".loader .fading-line").fadeOut();
+  $(".loader").fadeOut("slow");
+});
 
 var $myCarousel1 = $('#myCarousel'),
   $myHeader = $("#myHeader");

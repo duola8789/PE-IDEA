@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../dist/ico/favicon.ico">
   <title>关于品意丨PE-IDEA</title>
-  <link href="//lib.baomitu.com/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//lib.baomitu.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//lib.baomitu.com/animate.css/3.1.0/animate.min.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/animate.css/3.1.0/animate.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
-  <script src="//lib.baomitu.com/html5shiv/r29/html5.min.js"></script>
-  <script src="//lib.baomitu.com/respond.js/1.4.2/respond.min.js"></script>
+  <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link type="text/css" rel="stylesheet" href="../dist/styles/base.min.css">
-  <link type="text/css" rel="stylesheet/less" href="../dist/styles/pe-style.min.css">
 </head>
 <body id="aboutPePage">
+<div class="loader">
+  <div class="fading-line"></div>
+</div>
 <header>
   <div class="container">
     <div class="row">
@@ -40,7 +42,7 @@
               <li class="active"><a href="about_PE.html">关于品意<span class="visible-xs-inline visible-lg-inline">丨ABOUT PE-IDEA</span></a></li>
               <li><a href="case.html">案例展示<span class="visible-xs-inline visible-lg-inline">丨CASE Show</span></a></li>
               <li><a href="join_us.html">加入我们<span class="visible-xs-inline visible-lg-inline">丨Join US</span></a></li>
-              <li><a href="case.html">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
+              <li><a href="contact_us.html">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
             </ul>
           </div>
         </div>
@@ -133,9 +135,13 @@
 
   </div>
 </section>
-<script src="//lib.baomitu.com/jquery/2.1.4/jquery.min.js"></script>
-<script src="//lib.baomitu.com/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script>
+  $(window).load(function () {
+    $(".loader .fading-line").fadeOut();
+    $(".loader").fadeOut("slow");
+  });
   $(function(){
     // 增加图标抖动动画类
     $(".service-title").hover(function () {

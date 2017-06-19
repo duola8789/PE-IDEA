@@ -1,6 +1,11 @@
 /**
  * Created by zh on 2017/6/15.
  */
+$(window).load(function () {
+  $(".loader .fading-line").fadeOut();
+  $(".loader").fadeOut("slow");
+});
+
 var $body = $("html body");
 
 $(document).ready(function () {

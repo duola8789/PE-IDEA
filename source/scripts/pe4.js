@@ -3,6 +3,11 @@
  */
 var $body = $("html body");
 
+$(window).load(function () {
+  $(".loader .fading-line").fadeOut();
+  $(".loader").fadeOut("slow");
+});
+
 $(document).ready(function () {
   $('.aniview').AniView();
 });
