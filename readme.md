@@ -5,7 +5,7 @@ The website for PE-IDEA industry design company which is established by my frien
 
 运行：
 ``
-gulp watch
+gulp
 ``
 ## 版本迭代
 

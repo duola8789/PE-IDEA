@@ -1,0 +1,132 @@
+/***** reset.css******/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+html, body {
+  height: 100%;
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+img {
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1300px;
+  }
+}
+/************************* 预置变量 ******************************/
+@navHeight: 50px;
+@activeColor: #C00;
+@hoverColor: #C00;
+@border-color: #C00;
+@normal-color: #333;
+@textHover: #C00;
+.transition(@transitionTime) {
+  transition: all @transitionTime ease-out;
+  -webkit-transition: all @transitionTime ease-out;
+  -moz-transition: all @transitionTime ease-out;;
+}
+.border-bottom(@color) {
+  border-bottom: 3px solid @color
+}
+.pd10 {
+  padding: 10px 0;
+}
+.pd20 {
+  padding: 20px 0;
+}
+.pd30 {
+  padding: 30px 0;
+}
+.pd40 {
+  padding: 40px 0;
+}
+.mg5 {
+  margin: 5px 0;
+}
+.mg10 {
+  margin: 10px 0;
+}
+.mg20 {
+  margin: 20px 0;
+}
+.mg40 {
+  margin: 40px 0;
+}
+.textInfo {
+  font-size: 18px;
+  line-height: 2;
+  text-align: justify;
+}
+.affix-top {
+  position: absolute;
+}
+.normalLink {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+.normalLink:link, .normalLink:visited, .normalLink:hover, .normalLink:focus, .normalLink:active {
+  color: #333;
+  text-decoration: none;
+}
+.section{
+  padding-top: 100px;
+}
+//动画显示速度
+.fast {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+.slow {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+}
+.reallyslow {
+  animation-duration: 3s;
+  animation-delay: 1s;
+}

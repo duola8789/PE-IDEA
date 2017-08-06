@@ -133,7 +133,6 @@ h4 {
     width: 1270px;
   }
 }
-/***** reset end******/
 /************************* 预置变量 ******************************/
 .pd10 {
   padding: 10px 0;
@@ -201,9 +200,6 @@ h4 {
 #myCarousel,
 #myCarousel .item {
   max-height: 800px;
-}
-#myCarousel img {
-  width: 100%;
 }
 #myCarousel .carousel-control {
   display: flex;

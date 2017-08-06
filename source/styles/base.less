@@ -18,64 +18,42 @@ time, mark, audio, video {
   font-size: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol, ul {
   list-style: none;
 }
-
 blockquote, q {
   quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-//a {
-//  color: @normal-color;
-//  text-decoration: none;
-//  cursor: pointer;
-//}
-//a:link, a:visited, a:hover, a:focus, a:active {
-//  color: @normal-color;
-//  text-decoration: none;
-//}
 h2 {
   font-size: 24px;
 }
-
 h3 {
   font-size: 18px;
 }
-
 h4 {
   font-size: 16px;
 }
-
 @media (min-width: 1200px) {
   .container {
     width: 1270px;
   }
 }
-
-/***** reset end******/
-
 /************************* 预置变量 ******************************/
 @navHeight: 50px;
 @activeColor: #C00;
@@ -88,80 +66,63 @@ h4 {
   -webkit-transition: all @transitionTime ease-out;
   -moz-transition: all @transitionTime ease-out;;
 }
-
 .border-bottom(@color) {
   border-bottom: 3px solid @color
 }
-
 .pd10 {
   padding: 10px 0;
 }
-
 .pd20 {
   padding: 20px 0;
 }
-
 .pd30 {
   padding: 30px 0;
 }
-
 .pd40 {
   padding: 40px 0;
 }
-
 .mg5 {
   margin: 5px 0;
 }
-
 .mg10 {
   margin: 10px 0;
 }
-
 .mg20 {
   margin: 20px 0;
 }
-
 .mg40 {
   margin: 40px 0;
 }
-
 .textInfo {
   font-size: 18px;
   line-height: 2;
   text-align: justify;
 }
-
 .affix-top {
   position: absolute;
 }
-
 .normalLink {
   display: inline-block;
   color: #333;
   text-decoration: none;
 }
-
 .normalLink:link, .normalLink:visited, .normalLink:hover, .normalLink:focus, .normalLink:active {
   color: #333;
   text-decoration: none;
 }
-
 //动画显示速度
 .fast {
   animation-duration: 1s;
   animation-delay: 0s;
 }
-
 .slow {
   animation-duration: 2s;
   animation-delay: 0.5s;
 }
-
 .reallyslow {
   animation-duration: 3s;
   animation-delay: 1s;
 }
-
 /************************* 轮播图 ******************************/
 #myCarousel {
   user-select: none;
@@ -170,9 +131,7 @@ h4 {
   &, .item {
     max-height: 800px;
   }
-  img {
-    width: 100%;
-  }
+
   .carousel-inner {
     //height:100%;
   }
@@ -183,12 +142,10 @@ h4 {
     font-size: 30px;
   }
 }
-
 /************************* 导航 ******************************/
 .affix {
   top: 0;
 }
-
 header {
   position: absolute;
   width: 100% !important;
@@ -236,12 +193,10 @@ header {
     }
   }
 }
-
 /************************* 首页 ******************************/
 body {
   background: #f2f2f2;
 }
-
 /******** 关于品意 ******/
 #about-PE {
   padding-top: 80px;
@@ -279,7 +234,6 @@ body {
     }
   }
 }
-
 /******** 案例展示 ******/
 #case {
   padding-top: 80px;
@@ -376,7 +330,6 @@ body {
     }
   }
 }
-
 /******** 加入我们 ******/
 #joinUs {
   padding-top: 80px;
@@ -438,7 +391,6 @@ body {
     }
   }
 }
-
 /******** 联系我们 ******/
 #contactUs {
   position: relative;
@@ -458,7 +410,7 @@ body {
   }
   .contact {
     margin-top: 160px;
-    cursor:default;
+    cursor: default;
     .contactContent {
       i {
         color: #fff;
@@ -482,7 +434,6 @@ body {
     }
   }
 }
-
 /************************* footer ******************************/
 .footer {
   position: absolute;
@@ -504,7 +455,6 @@ body {
     }
   }
 }
-
 /************************* 关于品意page ******************************/
 #aboutPePage {
   min-height: 100%;
@@ -562,7 +512,6 @@ body {
     margin-top: 10px;
   }
 }
-
 /************************* 案例展示page ******************************/
 #casePage {
   min-height: 100%;
@@ -596,7 +545,7 @@ body {
       margin-bottom: 30px;
     }
   }
-  #moreCases, #lessCases{
+  #moreCases, #lessCases {
     display: none;
   }
   .relativeTitle {
@@ -615,19 +564,19 @@ body {
       width: 100%;
     }
   }
-  .items{
+  .items {
     margin-top: 40px;
   }
-  .items-nav{
-    float:none
+  .items-nav {
+    float: none
   }
-  .inside-nav{
+  .inside-nav {
     display: none;
     float: none;
     width: 100%;
     margin-top: -15px;
     text-align: center;
-    li{
+    li {
       display: inline-block;
       margin: 1.5% 1% 0;
       font-size: 16px;
@@ -638,7 +587,6 @@ body {
     }
   }
 }
-
 /************************* 加入我们page ******************************/
 #joinUsPage {
   min-height: 100%;
@@ -712,7 +660,6 @@ body {
     }
   }
 }
-
 //-----------------example页面--------------------------
 #examplePage {
   #example {
@@ -727,8 +674,8 @@ body {
       padding: 5% 5% 3%;
       color: #1a85c6;
       background: #D3D3D3;
-      h2{
-        line-height:1.3;
+      h2 {
+        line-height: 1.3;
       }
       h3 {
         margin: 30px 0 15px;
@@ -760,7 +707,6 @@ body {
 
   }
 }
-
 #backToTop {
   position: fixed;
   right: 6%;
@@ -770,28 +716,26 @@ body {
   color: #D3D3D3;
   background: #1a85c6;
 }
-
 #backToTop:hover {
   color: #D3D3D3 !important;
   background: #082b40 !important;
 }
-
 //-----------------加载效果--------------------------
-.loader{
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
   z-index: 10000000;
 }
-.fading-line{
+.fading-line {
   width: 200px;
-  height:200px;
-  background:rgba(0,0,0,0) url("../img/loading.gif") no-repeat center center;
+  height: 200px;
+  background: rgba(0, 0, 0, 0) url("../img/loading.gif") no-repeat center center;
 }
 //-----------------媒体查询--------------------------
 //主页联系我们
@@ -800,11 +744,9 @@ body {
     margin-top: 40px;
     margin-bottom: 140px;
   }
-
   #contactUs .contactContent {
     margin: 15px 0;
   }
-
   #contactUs .footer {
     span {
       font-size: 12px;
@@ -814,7 +756,7 @@ body {
       display: block
     }
   }
-  .test{
+  .test {
     cursor: pointer;
   }
 }

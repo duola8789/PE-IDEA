@@ -1,0 +1,332 @@
+//预置
+@navHeight: 54px;
+@red: #C00;
+.transition(@transitionTime) {
+  transition: all @transitionTime ease-out;
+  -webkit-transition: all @transitionTime ease-out;
+  -moz-transition: all @transitionTime ease-out;;
+}
+.textInfo {
+  font-size: 18px;
+  line-height: 2;
+  text-align: justify;
+}
+.border-bottom(@color) {
+  border-bottom: 3px solid @color
+}
+//加载效果
+.loader {
+  display: none;
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.loader img {
+  width: 50%;
+}
+//主页面
+.peWrap {
+  //display: none;
+  //section头部
+  .sectionIntro {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #951d22;
+    border-bottom: 1px solid #a7a7a7;
+    .sectionIntro-title {
+      margin-bottom: 12px;
+      p {
+        font-family: "Arial Black", sans-serif;
+        font-size: 12px;
+      }
+    }
+    a {
+      position: absolute;
+      right: 0;
+      top: 15px;
+      display: inline-block;
+      font-size: 12px;
+      color: #a7a7a7;
+      img {
+        vertical-align: text-bottom;
+      }
+      .xs-learnMore {
+        margin-right: 20px;
+      }
+    }
+  }
+  //轮播图
+  #myCarousel {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    &, .item {
+      max-height: 800px;
+    }
+    .carousel-control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+  }
+  //导航
+  .affix {
+    top: 0;
+  }
+  header {
+    position: absolute;
+    width: 100% !important;
+    height: @navHeight;
+    z-index: 10000;
+    background: #fff !important;
+    border-top: 2px solid #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+    .row {
+      .logo {
+        height: calc(~"@{navHeight} - 3px") !important;
+        background: url("../ico/logo.png") no-repeat center;
+        background-size: contain;
+        z-index: 10000;
+      }
+      nav.navbar {
+        margin-bottom: 0;
+        background: #fff !important;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+        z-index: 8000;
+        button.navbar-toggle {
+          background: none;
+          border: none;
+        }
+        a:active {
+          background: none;
+        }
+        a:hover {
+          color: @red;;
+          background: none;
+          .transition(0.5s)
+        }
+        .active a {
+          background: none;
+          color: @red;
+          &:hover {
+            background: none;
+            color: @red;
+          }
+          &:focus {
+            background: none;
+            color: @red;
+          }
+        }
+      }
+    }
+  }
+  //案例展示
+  #case {
+    .caseList {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      //案例展示导航
+      .items-nav {
+        width: 100%;
+        text-align: center;
+        li {
+          display: inline-block;
+          margin: 0 15px 20px;
+          font-size: 14px;
+          color: #a7a7a7;
+          cursor: pointer;
+          padding: 5px;
+        }
+        .active {
+          color: #fff;
+          background: #000;
+          font-weight: bold;
+        }
+      }
+    }
+    //案例展示具体内容
+    .items {
+      width: 100%;
+      .item {
+        position: relative;
+        float: left;
+        padding: 0;
+        a {
+          position: relative;
+          display: inline-block;
+          width: 98%;
+          height: 98%;
+          overflow: hidden;
+        }
+      }
+      .item img {
+        width: 100%;
+        vertical-align: middle;
+        transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+      }
+      .item:hover img {
+        transform: scale(1.1, 1.1);
+        -o-transform: scale(1.1, 1.1);
+        -moz-transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+      }
+      .workTitle {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+        color: #fff;
+        font-size: 24px;
+        z-index: 20;
+        .workTitle-bottom {
+          margin-top: 24px;
+          font-size: 16px;
+        }
+      }
+      .overlay {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 19;
+      }
+      .new .new-work {
+        display: inline-block;
+      }
+      .new-work {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        background: rgba(149, 29, 34, 0.7);
+        z-index: 500;
+      }
+    }
+
+  }
+  //合作开发
+  #joinUs {
+    .joinUs-text {
+      margin-bottom: 50px;
+      color: #272525;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+      .joinUs-text-bottom {
+        margin-top: 40px;
+        color: #951d22
+      }
+    }
+    .joinUs-content {
+      i {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+      }
+      i.market{
+        background: red;
+      }
+      i.intelligence{
+        background: darkblue;
+      }
+      i.industry{
+        background: peru;
+      }
+      i.machining{
+        background: azure;
+      }
+      i.cooperate{
+        background: hotpink;
+      }
+      .content-item{
+        margin-top : 20px;
+        margin-bottom : 20px;
+      }
+      h3 {
+        margin: 16px 0 12px;
+        color: #272525;
+        font-size: 16px;
+      }
+      p {
+        color: #a2a2a2;
+        text-align: justify;
+        font-size: 13px;
+        line-height: 18px;
+      }
+      @media (max-width: 768px) {
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+  //关于品意
+  #about-PE{
+    .aboutPEImage{
+      margin-bottom: 50px;
+      color: #272525;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    .aboutPE-content{
+      margin-bottom: 70px;
+      display: flex;
+      justify-content: space-around;
+      margin-left: 50px;
+      margin-right: 50px;
+      flex-wrap: wrap;
+      .content-item{
+        margin-top: 25px;
+        display: flex;
+        width: 200px;
+        align-items: center;
+        i {
+          display: inline-block;
+          width: 78px;
+          height: 78px;
+          background: red;
+        }
+        .content-item-text{
+          display: inline-block;
+          margin-left: 24px;
+          width: 120px;
+          text-align: justify;
+          h3{
+            margin-bottom: 10px;
+            color:#951d22;
+            font-size: 20px;
+          }
+          p{
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+  }
+}
