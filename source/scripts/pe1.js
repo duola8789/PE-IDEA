@@ -8,6 +8,7 @@ $(window).load(function () {
 });
 
 var $myCarousel1 = $('#myCarousel'),
+  $myCarousel2 = $('#myCarousel2'),
   $myHeader = $("#myHeader");
 var $body = $("html body");
 
@@ -46,8 +47,11 @@ $(function () {
 
   // 轮播图间隔
   $myCarousel1.carousel({
-      interval: 3000
-    });
+    interval: 3000
+  });
+  // $myCarousel2.carousel({
+  //   interval: 3000
+  // });
 
   // 案例hover效果
   $('.item').hover(function () {
