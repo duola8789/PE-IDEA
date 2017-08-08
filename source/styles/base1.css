@@ -1,17 +1,84 @@
 /***** reset.css******/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,22 +86,35 @@ time, mark, audio, video {
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
   display: block;
 }
-html, body {
+html,
+body {
   height: 100%;
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
 }
 table {
@@ -53,7 +133,7 @@ h4 {
 img {
   max-width: 100%;
 }
-a:hover{
+a:hover {
   text-decoration: none;
 }
 @media (min-width: 1200px) {
@@ -62,17 +142,6 @@ a:hover{
   }
 }
 /************************* 预置变量 ******************************/
-@navHeight: 50px;
-@red: #C00;
-@normal-color: #333;
-.transition(@transitionTime) {
-  transition: all @transitionTime ease-out;
-  -webkit-transition: all @transitionTime ease-out;
-  -moz-transition: all @transitionTime ease-out;;
-}
-.border-bottom(@color) {
-  border-bottom: 3px solid @color
-}
 .pd10 {
   padding: 10px 0;
 }
@@ -110,14 +179,17 @@ a:hover{
   color: #333;
   text-decoration: none;
 }
-.normalLink:link, .normalLink:visited, .normalLink:hover, .normalLink:focus, .normalLink:active {
+.normalLink:link,
+.normalLink:visited,
+.normalLink:hover,
+.normalLink:focus,
+.normalLink:active {
   color: #333;
   text-decoration: none;
 }
 .section {
   padding-top: 100px;
 }
-//动画显示速度
 .fast {
   animation-duration: 1s;
   animation-delay: 0s;

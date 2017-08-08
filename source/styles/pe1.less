@@ -148,14 +148,19 @@
           display: inline-block;
           margin: 0 15px 20px;
           font-size: 14px;
-          color: #a7a7a7;
           cursor: pointer;
           padding: 5px;
+          a {
+            color: #a7a7a7;
+            text-decoration: none;
+          }
         }
-        .active {
-          color: #fff;
-          background: #000;
-          font-weight: bold;
+        .active, li:hover {
+          background: #666;
+          .transition(0.5s);
+          a {
+            color: #fff;
+          }
         }
       }
     }
@@ -164,13 +169,10 @@
       width: 100%;
       .item {
         position: relative;
-        float: left;
-        padding: 0;
+        padding: 4px;
         a {
           position: relative;
-          display: inline-block;
-          width: 98%;
-          height: 98%;
+          display: block;
           overflow: hidden;
         }
       }
@@ -315,8 +317,8 @@
       p {
         color: #a2a2a2;
         text-align: justify;
-        font-size: 13px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 20px;
       }
       @media (max-width: 768px) {
         p {
@@ -346,20 +348,21 @@
           flex-grow: 0;
           flex-shrink: 0;
           display: inline-block;
-          width: 78px;
-          height: 78px;
+          width: 80px;
+          height: 80px;
+          background: url('../img/aboutPE-content-bg.png') no-repeat;
         }
         i.firstIcon {
-          background: red;
+          background-position: 0 0;
         }
         i.secondIcon {
-          background: cadetblue;
+          background-position: 33.3% 0;
         }
         i.thirdIcon {
-          background: peru;
+          background-position: 66.6% 0;
         }
         i.fourthIcon {
-          background: turquoise;
+          background-position: 100% 0;
         }
         .content-item-text {
           flex-grow: 0;
@@ -397,7 +400,7 @@
             filter: grayscale(100%);
             -webkit-filter: grayscale(100%);
           }
-          &:hover img{
+          &:hover img {
             filter: none;
             -webkit-filter: none;
             transition: 0.3s all ease-in;
@@ -447,6 +450,7 @@
               width: 30px;
               height: 30px;
               vertical-align: middle;
+              background: url('../img/contactWay-bg.png') no-repeat;
             }
             span {
               margin-left: 10px;
@@ -454,23 +458,26 @@
             }
           }
           li.phone i {
-            background: gold;
+            background-position: 0 0;
           }
           li.email i {
-            background: firebrick;
+            background-position: 33.3% 0;
           }
           li.address i {
-            background: maroon;
+            background-position: 66.6% 0;
           }
           li.website i {
-            background: lightgrey;
+            background-position: 100% 0;
           }
         }
       }
       .contactUs-map {
-        height: 250px;
         margin-bottom: 120px;
-        background: red;
+        height: 250px;
+        background: url('../img/loading.gif') no-repeat center center;
+        label, img{
+          max-width: none;
+        }
       }
     }
 
