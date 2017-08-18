@@ -7,487 +7,731 @@
   <link rel="shortcut icon" href="../favicon.ico">
   <title>案例展示丨PE-IDEA</title>
   <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-  <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://cdn.bootcss.com/animate.css/3.1.0/animate.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
   <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link type="text/css" rel="stylesheet" href="../dist/styles/base.min.css">
+  <link type="text/css" rel="stylesheet" href="../dist/styles/case.min.css">
 </head>
-<body id="casePage" class="test">
-<div class="loader">
-  <div class="fading-line"></div>
-</div>
-<header>
-  <div class="container">
-    <div class="row">
-      <a href="../index.html" class="col-sm-2 col-xs-4 col-xs-offset-1 col-lg-offset-0 logo">
-      </a>
-      <nav class="navbar navbar-default navbar-static" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example-navbar-collapse">
-              <span class="sr-only">切换导航</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"></a>
+<body id="casePage">
+<div class="peWrap_case">
+  <!--导航区域-->
+  <header id="myHeader">
+    <div class="container">
+      <div class="row">
+        <a href="../index.html?showLogo=0" class="col-xs-6 col-sm-3 col-md-3 col-lg-2 col-sm-offset-1 logo">
+          <img src="../dist/img/logo/logo.png">
+        </a>
+        <nav class="navbar navbar-default navbar-static" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse"
+                      data-target="#example-navbar-collapse" id="clickBtn">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav navbar-right col-lg-5 col-sm-pull-1 col-lg-pull-0">
+                <li><a href="../index.html?showLogo=0">首页</a></li>
+                <li class="active"><a href="case.html">案例展示</a></li>
+                <li><a href="join_us.html">合作开发</a></li>
+                <li><a href="about_PE.html">关于品意</a></li>
+                <li><a href="contact_us.html">联系我们</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="../index.html">HOME</a></li>
-              <li><a href="about_PE.html">关于品意<span class="visible-xs-inline visible-lg-inline">丨ABOUT PE-IDEA</span></a></li>
-              <li  class="active"><a href="case.html">案例展示<span class="visible-xs-inline visible-lg-inline">丨CASE Show</span></a></li>
-              <li><a href="join_us.html">加入我们<span class="visible-xs-inline visible-lg-inline">丨Join US</span></a></li>
-              <li><a href="contact_us.html">联系我们<span class="visible-xs-inline visible-lg-inline">丨Contact US</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-<section id="case" class="fullPage">
-  <div class="container">
-    <div class="row intro">
-      <div class="col-xs-12">
-        <h2 class="text-center pd20">Service and Case</h2>
-        <p>
-          北京品意工业设计有限公司，一个新兴的创新设计机构，一个创新的设计平台。坚持以原创为本，崇尚创新，极力追求客户和消费者满意，达到设计和制造的完美平衡，致力于产品外观设计、结构设计、模具制造跟踪、供应链管理、品牌形象、包装创意为核心的工业设计。服务涉及军队党政、工业设备、专用手持、3C数码、家用电器、健康医疗等诸多领域。
-        </p>
+        </nav>
       </div>
     </div>
-    <div class="row service">
-      <div class="col-sm-12 col-xs-12 service-title text-center aniview slow" av-animation="fadeInRight">
-          <ul id='items-nav' class="items-nav col-sm-12 col-xs-6">
+  </header>
+  <!--案例展示-->
+  <section id="case" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 caseList">
+          <ul id='items-nav' class="items-nav">
             <li class="all active" data-filter="item"><span>所有案例</span></li>
             <li class="product" data-filter="product"><span>产品设计</span></li>
             <li class="brand" data-filter="brand"><span>品牌形象</span></li>
+            <li class="structure" data-filter="structure"><span>结构设计</span></li>
+            <li class="intelligence" data-filter="intelligence"><span>智能硬件</span></li>
             <li class="cooperate" data-filter="cooperate"><span>合作开发</span></li>
           </ul>
-        <div id="navInside">
-          <ul id="productNav" class="inside-nav col-xs-12">
-            <li data-filter="productDigital">消费数码</li>
-            <li data-filter="productMedical">医疗健康</li>
-            <li data-filter="productHandy">专用手持备</li>
-            <li data-filter="productIndustry">工业设备</li>
-          </ul>
-          <ul id="brandNav" class="inside-nav col-xs-12">
-            <li data-filter="brandCompany">企业形象</li>
-            <li data-filter="brandPackage">包装创意</li>
-            <li data-filter="brandPrint">平面宣传</li>
-          </ul>
         </div>
-        <ul class="items">
-          <li class="col-xs-12 col-sm-3 item item-design allCase init product productDigital new">
-            <a href="design_example/example1.html">
-              <img src="../dist/img/work/1.jpg" alt="">
-              <span class="work-title">work1</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item init item-design brand brandCompany new">
-            <a href="design_example/example2.html">
-              <img src="../dist/img/work/2.jpg" alt="">
-              <span class="work-title">work2</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item init item-design product productMedical new">
-            <a href="design_example/example3.html">
-              <img src="../dist/img/work/3.jpg" alt="">
-              <span class="work-title">work3</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 init item item-design product productDigital new">
-            <a href="design_example/example4.html">
-              <img src="../dist/img/work/4.jpg" alt="">
-              <span class="work-title">work4</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 init item item-design product productHandy new">
-            <a href="design_example/example5.html">
-              <img src="../dist/img/work/5.jpg" alt="">
-              <span class="work-title">work5</span>
-              <div class="overlay">123</div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 init item item-design product productIndustry new">
-            <a href="../pages/design_example/example6.html">
-              <img src="../dist/img/work/6.jpg" alt="">
-              <span class="work-title">work6</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 init item item-design brand brandCompany new">
-            <a href="../pages/design_example/example7.html">
-              <img src="../dist/img/work/7.jpg" alt="">
-              <span class="work-title">work7</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 init item item-design brand brandPrint">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productMedical">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productMedical" >
-          <a href="../pages/design_example/example8.html">
-            <img src="../dist/img/work/8.jpg" alt="">
-            <span class="work-title">work8</span>
-            <div class="overlay"></div>
-            <div class="new-work">NEW</div>
-          </a>
-        </li>
-          <li class="col-xs-12 col-sm-3 item item-design">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productHandy">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li> <li class="col-xs-12 col-sm-3 item item-design product productHandy">
-          <a href="../pages/design_example/example8.html">
-            <img src="../dist/img/work/8.jpg" alt="">
-            <span class="work-title">work8</span>
-            <div class="overlay"></div>
-            <div class="new-work">NEW</div>
-          </a>
-        </li> <li class="col-xs-12 col-sm-3 item item-design product productHandy">
-          <a href="../pages/design_example/example8.html">
-            <img src="../dist/img/work/8.jpg" alt="">
-            <span class="work-title">work8</span>
-            <div class="overlay"></div>
-            <div class="new-work">NEW</div>
-          </a>
-        </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productDigital">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productDigital">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design brand brandPrint">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design brand brandCompany">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productIndustry">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design product productIndustry">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design cooperate">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design brand brandPackage">
-            <a href="../pages/design_example/example8.html">
-              <img src="../dist/img/work/8.jpg" alt="">
-              <span class="work-title">work8</span>
-              <div class="overlay"></div>
-              <div class="new-work">NEW</div>
-            </a>
-          </li>
-          <li class="col-xs-12 col-sm-3 item item-design brand brandCompany">
-          <a href="../pages/design_example/example8.html">
-            <img src="../dist/img/work/8.jpg" alt="">
-            <span class="work-title">work8</span>
-            <div class="overlay"></div>
-            <div class="new-work">NEW</div>
-          </a>
-        </li>
-        </ul>
+        <!--具体案例-->
+        <div class="">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center aniview slow" av-animation="fadeInRight">
+            <ul class="items">
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t7.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <!-- 产品设计-->
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t7.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item product">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t7.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <!-- 品牌形象-->
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item brand">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t7.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <!-- 结构设计-->
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item structure">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item structure">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item structure">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item structure">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <!-- 智能硬件-->
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item intelligence">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t7.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <!-- 合作开发-->
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t1.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t2.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t3.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t4.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t5.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t6.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 item cooperate">
+                <a href="../pages/design_example/example1.html">
+                  <img src="../dist/img/work/thumbnail/t7.jpg" alt="">
+                  <div class="workTitle">
+                    <p class="workTitle-top">便携式心电仪</p>
+                    <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
+                  </div>
+                  <div class="overlay"></div>
+                  <div class="new-work">NEW</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--联系我们-->
+        <div class="row">
+          <div class="caseFooter col-xs-12">
+            <div class="caseFooter-text">
+              <p class="chinese">联系我们</p>
+              <p class="english">CONTACT US</p>
+            </div>
+            <div class="caseFooter-number">
+              <i class="icon-phone"></i>
+              <span><a href="tel:18688888888">010-66666666</a></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12 col-xs-12">
-        <div class="relative">
-          <div id="moreCases" class="relativeTitle"><p> + 更多案例</p></div>
-        </div>
-      </div>
+  </section>
+  <!--页脚-->
+  <div class="footer">
+    <div class="col-xs-12 footer-content text-center">
+      <p>
+        <span>本网站所有图片及资料均为本公司所有，</span><span>对于任何形式的侵权行为,</span><span>我们将保留一切追究法律责任的权利。</span>
+      </p>
+    </div>
+    <div class="col-xs-12 footer-content text-center">
+      <span>北京品意工业设计有限公司©2017</span>
+      <span>All Rights Reserved</span>
+      <span class="backupNo">京ICP备16033444号</span>
     </div>
   </div>
-
-  <a id="backToTop" href="#casePage">
-    <i class="fa fa-angle-up fa-2x animated"></i>
-  </a>
-</section>
-<!--案例展示-->
-<section id="case" class="fullPage section">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6 sectionIntro col-md-offset-3">
-        <div class="sectionIntro-title">
-          <h2>案例展示</h2>
-          <p>CASES SHOW</p>
-        </div>
-        <a href="pages/case.html">
-          <img src="dist/img/learnMore.png">
-          <span class="hidden-xs">查看更多案例</span>
-          <span class="visible-xs-inline-block xs-learnMore">More</span>
-        </a>
-      </div>
-      <div class="col-xs-12 col-md-6 caseList col-md-offset-3">
-        <ul id='items-nav' class="items-nav">
-          <li class="all active" data-filter="init"><span>所有案例</span></li>
-          <li class="product" data-filter="product"><span>产品设计</span></li>
-          <li class="brand" data-filter="brand"><span>品牌形象</span></li>
-          <li class="structure" data-filter="structure"><span>结构设计</span></li>
-          <li class="intelligence" data-filter="intelligence"><span>智能硬件</span></li>
-          <li class="cooperate" data-filter="cooperate"><span>合作开发</span></li>
-        </ul>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 service-title text-center aniview slow" av-animation="fadeInRight">
-          <ul class="items">
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item product brand">
-              <a href="pages/design_example/example1.html">
-                <img src="dist/img/work/1.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item product brand structure">
-              <a href="pages/design_example/example1.html">
-                <img src="dist/img/work/2.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item structure brand intelligence">
-              <a href="pages/design_example/example3.html">
-                <img src="dist/img/work/3.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item intelligence brand cooperate">
-              <a href="pages/design_example/example4.html">
-                <img src="dist/img/work/4.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item cooperate">
-              <a href="pages/design_example/example5.html">
-                <img src="dist/img/work/5.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item brand product">
-              <a href="pages/design_example/example6.html">
-                <img src="dist/img/work/6.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init brand item product">
-              <a href="pages/design_example/example7.html">
-                <img src="dist/img/work/7.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new init item brand product">
-              <a href="pages/design_example/example8.html">
-                <img src="dist/img/work/8.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item product">
-              <a href="pages/design_example/example8.html">
-                <img src="dist/img/work/9.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item brand product">
-              <a href="pages/design_example/example8.html">
-                <img src="dist/img/work/10.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-            <li class="col-md-3 col-sm-6 col-lg-3 col-xs-10 col-xs-offset-1 col-sm-offset-0 new item brand product">
-              <a href="pages/design_example/example8.html">
-                <img src="dist/img/work/11.jpg" alt="">
-                <div class="workTitle">
-                  <p class="workTitle-top">便携式心电仪</p>
-                  <p class="workTitle-bottom">点击查看项目详情及产品细节</p>
-                </div>
-                <div class="overlay"></div>
-                <div class="new-work">NEW</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!--回到顶部+底部按钮-->
+  <a id="backToTop" href="#casePage">&and;</a>
+  <a id="backToBottom" href="#backToBottomTarget">&or;</a>
+  <span id="backToBottomTarget"></span>
+</div>
 <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../dist/scripts/jquery.aniview.min.js"></script>
 <script src="http://cdn.bootcss.com/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
 <script src="http://cdn.bootcss.com/jquery.imagesloaded/4.1.3/imagesloaded.min.js"></script>
-<script type="text/javascript" src="../dist/scripts/pe4.min.js"></script>
+<script type="text/javascript" src="../dist/scripts/common.min.js"></script>
+<script type="text/javascript" src="../dist/scripts/case.min.js"></script>
 </body>
 </html>

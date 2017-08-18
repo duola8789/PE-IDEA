@@ -98,7 +98,9 @@ nav,
 section {
   display: block;
 }
+html,
 body {
+  height: 100%;
   line-height: 1;
 }
 ol,
@@ -128,56 +130,50 @@ h3 {
 h4 {
   font-size: 16px;
 }
+img {
+  max-width: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
 @media (min-width: 1200px) {
   .container {
-    width: 1270px;
+    width: 1300px;
+  }
+}
+/************************* font-size设置*************************/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (min-width: 1201px) {
+  html {
+    font-size: 62.5%;
   }
 }
 /************************* 预置变量 ******************************/
-.pd10 {
-  padding: 10px 0;
-}
-.pd20 {
-  padding: 20px 0;
-}
-.pd30 {
-  padding: 30px 0;
-}
-.pd40 {
-  padding: 40px 0;
-}
-.mg5 {
-  margin: 5px 0;
-}
-.mg10 {
-  margin: 10px 0;
-}
-.mg20 {
-  margin: 20px 0;
-}
-.mg40 {
-  margin: 40px 0;
-}
-.textInfo {
-  font-size: 18px;
-  line-height: 2;
-  text-align: justify;
-}
 .affix-top {
   position: absolute;
 }
-.normalLink {
-  display: inline-block;
-  color: #333;
-  text-decoration: none;
-}
-.normalLink:link,
-.normalLink:visited,
-.normalLink:hover,
-.normalLink:focus,
-.normalLink:active {
-  color: #333;
-  text-decoration: none;
+.section {
+  padding-top: 100px;
 }
 .fast {
   animation-duration: 1s;
@@ -191,45 +187,27 @@ h4 {
   animation-duration: 3s;
   animation-delay: 1s;
 }
-/************************* 轮播图 ******************************/
-#myCarousel {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-}
-#myCarousel,
-#myCarousel .item {
-  max-height: 800px;
-}
-#myCarousel .carousel-control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-}
-/************************* 导航 ******************************/
-.affix {
-  top: 0;
-}
 header {
   position: absolute;
   width: 100% !important;
-  height: 50px;
+  height: 54px;
   z-index: 10000;
-  background: #fff !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
 }
 header .row .logo {
-  height: 50px !important;
-  background: url("../ico/logo.png") no-repeat center;
-  background-size: contain;
+  height: calc(54px - 4px) !important;
+  line-height: calc(54px - 4px);
   z-index: 10000;
 }
 header .row nav.navbar {
   margin-bottom: 0;
-  background: #fff !important;
+  background: rgba(255, 255, 255, 0.8) !important;
   border: none;
   font-weight: 600;
   font-size: 14px;
+  font-size: 1.4rem;
   z-index: 8000;
 }
 header .row nav.navbar button.navbar-toggle {
@@ -258,97 +236,103 @@ header .row nav.navbar .active a:focus {
   background: none;
   color: #C00;
 }
-/************************* 首页 ******************************/
-body {
-  background: #f2f2f2;
-}
-/******** 关于品意 ******/
-#about-PE {
-  padding-top: 80px;
-}
-#about-PE > a {
-  display: block;
-}
-#about-PE .intro {
+#backToTop,
+#backToBottom {
+  position: fixed;
+  right: 1%;
+  bottom: 70px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #D3D3D3;
+  line-height: 36px;
+  font-size: 40px;
+  font-size: 4rem;
+  font-weight: bold;
   text-align: center;
+  background: #1a85c6;
+  border-radius: 5px;
+  opacity: 0.5;
+  z-index: 20000;
 }
-#about-PE .intro h2 {
-  display: inline-block;
-  border-bottom: 3px solid #C00;
-  padding: 10px 20px;
+#backToTop:hover,
+#backToBottom:hover {
+  color: #D3D3D3 !important;
+  opacity: 1;
 }
-#about-PE .intro p {
-  display: inline-block;
-  padding: 20px 0;
-  font-size: 18px;
-  line-height: 2;
-  text-align: justify;
-}
-#about-PE .service-title {
-  margin-top: 30px;
-  display: inline-block;
-  color: #333;
+#backToTop:visited,
+#backToBottom:visited,
+#backToTop:focus,
+#backToBottom:focus,
+#backToTop:active,
+#backToBottom:active {
   text-decoration: none;
 }
-#about-PE .service-title h3 {
-  padding: 20px 0;
+#backToBottom {
+  bottom: 20px;
 }
-#about-PE .service-title:hover i {
-  color: #C00;
+.backToBottomTarget {
+  display: none;
 }
-#about-PE .service-title p {
-  padding: 20px 0;
-  line-height: 1.5;
-  text-align: justify;
-}
-/******** 案例展示 ******/
-#case {
-  padding-top: 80px;
-}
-#case .intro {
-  text-align: center;
-  margin-bottom: 20px;
-}
-#case .intro p {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 18px;
-  line-height: 2;
-  text-align: justify;
-}
-#case .intro h2 {
-  display: inline-block;
-  border-bottom: 3px solid #C00;
-  padding: 10px 20px;
-}
-#case .items-nav {
-  width: 100%;
+.caseFooter {
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
-#case .items-nav li {
+.caseFooter .caseFooter-text {
   display: inline-block;
-  margin: 0 20px 30px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 20px;
+}
+.caseFooter .caseFooter-text .chinese {
   font-size: 18px;
-  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
-#case .items-nav .active {
-  color: #C00;
+.caseFooter .caseFooter-text .english {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
-#case .items {
+.caseFooter .caseFooter-number {
+  display: inline-block;
+  width: 200px;
+  padding: 8px 0;
+  margin-left: 20px;
+  border: 2px solid #272525;
+  border-radius: 25px;
+  text-align: center;
+}
+.caseFooter .caseFooter-number span {
+  font-size: 16px;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+.caseFooter .caseFooter-number span a {
+  text-decoration: none;
+  color: #272525;
+}
+.caseFooter .icon-phone {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  background: url('../img/background/icon-phone.png') no-repeat center;
+}
+.items {
   width: 100%;
 }
-#case .items .item {
+.items .item {
   position: relative;
-  float: left;
-  padding: 0;
+  padding: 4px;
+}
+.items .item a {
+  position: relative;
+  display: block;
   overflow: hidden;
 }
-#case .items .item a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-#case .items .item img {
+.items .item img {
   width: 100%;
   vertical-align: middle;
   transition: all 0.5s ease-in-out;
@@ -356,466 +340,72 @@ body {
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
-#case .items .item:hover img {
+.items .item:hover img {
   transform: scale(1.1, 1.1);
   -o-transform: scale(1.1, 1.1);
   -moz-transform: scale(1.1, 1.1);
   -webkit-transform: scale(1.1, 1.1);
 }
-#case .items .work-title {
+.items .workTitle {
   display: none;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  color: #ddd;
-  font-size: 26px;
-  z-index: 20;
-}
-#case .items .overlay {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 19;
-}
-#case .items .new .new-work {
-  display: inline-block;
-}
-#case .items .new-work {
-  display: none;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-  background: #FF0000;
-  z-index: 500;
-}
-/******** 加入我们 ******/
-#joinUs {
-  padding-top: 80px;
-}
-#joinUs .intro {
-  text-align: center;
-}
-#joinUs .intro h2 {
-  display: inline-block;
-  border-bottom: 3px solid #C00;
-  padding: 10px 20px;
-}
-#joinUs .intro .joinUs-content {
-  display: inline-block;
-  padding: 20px 0;
-}
-#joinUs .intro .joinUs-content p {
-  font-size: 18px;
-  line-height: 2;
-  text-align: justify;
-  margin: 5px 0;
-}
-#joinUs .designer .img-wrap {
-  overflow: hidden;
-}
-#joinUs .designer img {
-  width: 100%;
-  vertical-align: middle;
-  transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-}
-#joinUs .designer h3 {
-  padding-top: 15px;
-  color: #333;
-}
-#joinUs .designer h4 {
-  padding: 15px 0;
-  color: #000;
-}
-#joinUs .designer p {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #000;
-  border-top: 1px solid #C00;
-}
-#joinUs .designer img:hover {
-  transform: scale(1.2, 1.2);
-  -o-transform: scale(1.2, 1.2);
-  -moz-transform: scale(1.2, 1.2);
-  -webkit-transform: scale(1.2, 1.2);
-}
-#joinUs .designer a {
-  margin: 15px 0;
-}
-#joinUs .designer a:hover {
-  text-decoration: none;
-}
-/******** 联系我们 ******/
-#contactUs {
-  position: relative;
-  padding-top: 80px;
-  background: url("../img/cover/contact.jpg") no-repeat center center;
-  background-size: cover;
-  font-size: 18px;
-}
-#contactUs .intro {
-  text-align: center;
-  margin-bottom: 30px;
-}
-#contactUs .intro h2 {
-  display: inline-block;
-  border-bottom: 3px solid #C00;
-  padding: 10px 20px;
-  color: #fff;
-}
-#contactUs .contact {
-  margin-top: 160px;
-  cursor: default;
-}
-#contactUs .contact .contactContent i {
-  color: #fff;
-}
-#contactUs .contact .contactContent h4 {
-  margin: 20px auto 0;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
-}
-#contactUs .QRCode img {
-  width: 72px;
-  height: 72px;
-}
-#contactUs .QRCode p {
-  color: #fff;
-  margin-top: 5px;
-}
-/************************* footer ******************************/
-.footer {
   position: absolute;
   left: 50%;
-  bottom: 5px;
-  transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
-  padding-top: 5px;
   color: #fff;
-  font-size: 14px;
-  border-top: 1px solid #999;
+  font-size: 24px;
+  font-size: 2.4rem;
+  z-index: 20;
 }
-.footer .footer-content {
-  margin: 3px 0;
-}
-.footer .footer-content span {
-  margin: 0 5px;
-}
-/************************* 关于品意page ******************************/
-#aboutPePage {
-  min-height: 100%;
-}
-#aboutPePage a:active {
-  background: none;
-}
-#aboutPePage a:hover {
-  color: #C00;
-  background: none;
-  transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-}
-#aboutPePage .active a {
-  background: none;
-  color: #C00;
-}
-#aboutPePage .active a:hover {
-  background: none;
-  color: #C00;
-}
-#aboutPePage .active a:focus {
-  background: none;
-  color: #C00;
-}
-#aboutPePage #about-PE {
-  padding-top: 30px;
-}
-#aboutPePage #about-PE > div.container {
-  padding-top: 50px;
-}
-#aboutPePage #about-PE > div.container .intro {
-  margin-bottom: 40px;
-}
-#aboutPePage #about-PE > div.container .intro p {
-  padding-bottom: 0;
-}
-#aboutPePage .service {
-  margin: 25px 0;
-}
-#aboutPePage .service-title {
-  margin-top: 0;
-}
-#aboutPePage .service-title h3 {
-  padding: 10px 0;
-}
-#aboutPePage .service-content {
-  text-align: justify;
-  line-height: 1.5;
-  cursor: pointer;
-}
-#aboutPePage .service-content p:first-child:hover {
-  color: #C00;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-}
-#aboutPePage .servieText {
-  margin-top: 10px;
-}
-/************************* 案例展示page ******************************/
-#casePage {
-  min-height: 100%;
-}
-#casePage a:active {
-  background: none;
-}
-#casePage a:hover {
-  color: #C00;
-  background: none;
-  transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-}
-#casePage .active a {
-  background: none;
-  color: #C00;
-}
-#casePage .active a:hover {
-  background: none;
-  color: #C00;
-}
-#casePage .active a:focus {
-  background: none;
-  color: #C00;
-}
-#casePage #case {
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-#casePage #case > div.container {
-  padding-top: 50px;
-}
-#casePage #case .intro {
-  margin-bottom: 30px;
-}
-#casePage #moreCases,
-#casePage #lessCases {
-  display: none;
-}
-#casePage .relativeTitle {
-  padding: 10px 0;
-  color: #fff;
-  text-align: center;
-  background: #666;
-  letter-spacing: 3px;
-  cursor: pointer;
-}
-#casePage .relativeContent {
-  display: inline-block;
-  padding: 0;
-}
-#casePage .relativeContent img {
-  width: 100%;
-}
-#casePage .items {
-  margin-top: 40px;
-}
-#casePage .items-nav {
-  float: none;
-}
-#casePage .inside-nav {
-  display: none;
-  float: none;
-  width: 100%;
-  margin-top: -15px;
-  text-align: center;
-}
-#casePage .inside-nav li {
-  display: inline-block;
-  margin: 1.5% 1% 0;
+.items .workTitle .workTitle-bottom {
+  margin-top: 24px;
   font-size: 16px;
-  cursor: pointer;
+  font-size: 1.6rem;
 }
-#casePage .inside-nav .active {
-  color: #C00;
-}
-/************************* 加入我们page ******************************/
-#joinUsPage {
-  min-height: 100%;
-}
-#joinUsPage a:active {
-  background: none;
-}
-#joinUsPage a:hover {
-  color: #C00;
-  background: none;
-  transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-}
-#joinUsPage .active a {
-  background: none;
-  color: #C00;
-}
-#joinUsPage .active a:hover {
-  background: none;
-  color: #C00;
-}
-#joinUsPage .active a:focus {
-  background: none;
-  color: #C00;
-}
-#joinUsPage #joinUs {
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-#joinUsPage #joinUs > div.container {
-  padding-top: 50px;
-}
-#joinUsPage #joinUs > div.container .intro p {
-  padding-bottom: 50px;
-}
-#joinUsPage .designer {
-  margin-top: 50px;
-}
-#joinUsPage .designer h3 {
-  padding-top: 10px;
-  color: #333;
-}
-#joinUsPage .designer h4 {
-  padding: 10px 0;
-  color: #000;
-}
-#joinUsPage .designer .designer-title p {
-  padding-top: 10px;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #000;
-}
-#joinUsPage .designer .designer-content {
-  cursor: pointer;
-}
-#joinUsPage .designer .designer-content p {
-  margin-bottom: 10px;
-  padding: 0 10px;
-  line-height: 2;
-  border: none;
-  text-align: justify;
-}
-#joinUsPage .designer .designer-content p:hover {
-  color: #C00;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-}
-#joinUsPage .designer .designer-content .designerIntro {
-  margin-top: 10px;
-}
-#joinUsPage .designer .designer-content .designerIntro:hover {
-  color: #000;
-}
-#examplePage #example {
-  padding-top: 50px;
-}
-#examplePage #example .example-image img {
-  width: 100%;
-}
-#examplePage #example .example-content {
-  padding: 5% 5% 3%;
-  color: #1a85c6;
-  background: #D3D3D3;
-}
-#examplePage #example .example-content h2 {
-  line-height: 1.3;
-}
-#examplePage #example .example-content h3 {
-  margin: 30px 0 15px;
-  color: #666;
-  font-weight: bold;
-}
-#examplePage #example .example-content p {
-  margin: 5px 0;
-  color: #333;
-  text-align: justify;
-  line-height: 1.3;
-}
-#examplePage .relativeTitle {
-  padding: 10px 0;
-  color: #fff;
-  text-align: center;
-  background: #666;
-  letter-spacing: 3px;
-}
-#examplePage .relativeContent {
-  display: inline-block;
-  padding: 0;
-}
-#examplePage .relativeContent img {
-  width: 100%;
-}
-#backToTop {
-  position: fixed;
-  right: 6%;
-  bottom: 30px;
-  display: inline-block;
-  padding: 0 5px;
-  color: #D3D3D3;
-  background: #1a85c6;
-}
-#backToTop:hover {
-  color: #D3D3D3 !important;
-  background: #082b40 !important;
-}
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.items .overlay {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 10000000;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 19;
 }
-.fading-line {
-  width: 200px;
-  height: 200px;
-  background: rgba(0, 0, 0, 0) url("../img/loading.gif") no-repeat center center;
+.items .new .new-work {
+  display: inline-block;
 }
-@media (max-width: 768px) {
-  #contactUs .contact {
-    margin-top: 40px;
-    margin-bottom: 140px;
-  }
-  #contactUs .contactContent {
-    margin: 15px 0;
-  }
-  #contactUs .footer span {
-    font-size: 12px;
-    margin: 2px 0;
-  }
-  #contactUs .footer .footer-content > span:last-child {
-    display: block;
-  }
-  .test {
-    cursor: pointer;
-  }
+.items .new-work {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-size: 1.8rem;
+  background: rgba(149, 29, 34, 0.7);
+  z-index: 500;
+}
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  border-top: 2px solid #f2f2f2;
+}
+.footer span {
+  display: inline-block;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin: 3px 0;
+}
+.footer span.backupNo {
+  margin: 0 5px;
 }

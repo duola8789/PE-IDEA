@@ -1,0 +1,113 @@
+#contactUsPage #myHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+#contactUsPage #contactUs {
+  position: relative;
+}
+#contactUsPage #contactUs .contactUs-title {
+  margin-top: 30px;
+  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #951d22;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail {
+  margin-bottom: 40px;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail h3 {
+  color: #951d22;
+  font-size: 22px;
+  font-size: 2.2rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #contactUsPage #contactUs .contactUs-content .contactUs-detail h3 {
+    color: #951d22;
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactUs-detail-wrap {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .qrCode {
+  margin-top: 40px;
+  text-align: center;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .qrCode img {
+  border: 1px solid #f2f2f2;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .qrCode p {
+  margin-top: 10px;
+  color: #000;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  color: #272525;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li i {
+  display: inline-block;
+  width: 30px;
+  height: 32px;
+  vertical-align: middle;
+  background: url('../img/background/contactWay-bg.png') no-repeat;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li span {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li span a {
+  text-decoration: none;
+  color: #272525;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.phone i {
+  background-position: 0 0;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.email i {
+  background-position: 33.3% 0;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.address i {
+  background-position: 66.6% 0;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.website i {
+  background-position: 100% 0;
+}
+@media (max-width: 768px) {
+  #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-map {
+  margin-top: 20px;
+  margin-bottom: 120px;
+  height: 350px;
+  background: url('../img/background/loading.gif') no-repeat center center;
+}
+#contactUsPage #contactUs .contactUs-content .contactUs-map label,
+#contactUsPage #contactUs .contactUs-content .contactUs-map img {
+  max-width: none;
+}
