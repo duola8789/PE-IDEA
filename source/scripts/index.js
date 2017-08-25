@@ -77,6 +77,11 @@ $(function () {
     $('.loader').hide()
   }
 
+  // 鼠标移开下来文字消失
+  $('#joinUs').find('.content-item').on('mouseleave', function(){
+    $('.collapse').collapse('hide')
+  });
+
   // 轮播图间隔
   $myCarousel1.carousel({
     interval: 3000
