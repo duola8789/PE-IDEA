@@ -218,7 +218,7 @@ header .row nav.navbar a:active {
   background: none;
 }
 header .row nav.navbar a:hover {
-  color: #C00;
+  color: #951d22;
   background: none;
   transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
@@ -226,15 +226,15 @@ header .row nav.navbar a:hover {
 }
 header .row nav.navbar .active a {
   background: none;
-  color: #C00;
+  color: #951d22;
 }
 header .row nav.navbar .active a:hover {
   background: none;
-  color: #C00;
+  color: #951d22;
 }
 header .row nav.navbar .active a:focus {
   background: none;
-  color: #C00;
+  color: #951d22;
 }
 #backToTop,
 #backToBottom {

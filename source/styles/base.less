@@ -95,6 +95,7 @@ body {
 /************************* 预置变量 ******************************/
 @navHeight: 54px;
 @red: #C00;
+@redNew: #951d22;
 @normal-color: #333;
 .transition(@transitionTime) {
   transition: all @transitionTime ease-out;
@@ -151,20 +152,20 @@ header {
         background: none;
       }
       a:hover {
-        color: @red;;
+        color: @redNew;;
         background: none;
         .transition(0.5s)
       }
       .active a {
         background: none;
-        color: @red;
+        color: @redNew;
         &:hover {
           background: none;
-          color: @red;
+          color: @redNew;
         }
         &:focus {
           background: none;
-          color: @red;
+          color: @redNew;
         }
       }
     }
