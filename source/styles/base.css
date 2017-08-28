@@ -138,7 +138,7 @@ a:hover {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1300px;
+    width: 100%;
   }
 }
 /************************* font-size设置*************************/

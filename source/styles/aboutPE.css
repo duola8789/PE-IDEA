@@ -92,3 +92,9 @@
   -webkit-filter: none;
   transition: 0.3s all ease-in;
 }
+#aboutPEPage #aboutPE .aboutPEImage {
+  text-align: center;
+}
+#aboutPEPage #aboutPE .aboutPEImage img {
+  width: 100%;
+}

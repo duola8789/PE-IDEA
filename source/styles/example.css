@@ -148,6 +148,12 @@
   border: 1px solid #727272;
   border-radius: 4px;
 }
+#examplePage .exampleImage {
+  text-align: center;
+}
+#examplePage .exampleImage img {
+  width: 100%;
+}
 #examplePage .moreCases {
   height: 50px;
   line-height: 70px;

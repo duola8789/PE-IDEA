@@ -23,6 +23,14 @@ function setCarouselHeight() {
   });
 }
 
+// 设置展示地图的宽度
+function setMapHeight(){
+  var $map = $('.contactUs-map'),
+    $contactUsDetail = $('.contactUs-detail');
+  var height = $contactUsDetail.height();
+  $map.height(height);
+}
+
 // 案例展示瀑布流效果
 function initPortfolio() {
   var items = $('.items');
@@ -130,6 +138,9 @@ $(function () {
 
   // 案例展示瀑布流效果
   initPortfolio();
+
+// 设置展示地图的宽度
+  setMapHeight();
 
   // 创建百度地图
   createMap();

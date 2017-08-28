@@ -195,7 +195,7 @@
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.8;
-  text-align: justify;
+  text-align: center;
 }
 .peWrap #about-PE .aboutPE-content {
   margin-bottom: 70px;
@@ -366,7 +366,6 @@
 }
 .peWrap #contactUs .contactUs-content .contactUs-map {
   margin-bottom: 120px;
-  height: 250px;
   background: url('../img/background/loading.gif') no-repeat center center;
 }
 .peWrap #contactUs .contactUs-content .contactUs-map label,
