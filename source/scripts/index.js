@@ -27,7 +27,7 @@ function setCarouselHeight() {
 function setMapHeight(){
   var $map = $('.contactUs-map'),
     $contactUsDetail = $('.contactUs-detail');
-  var maxHeight = 300;
+  var maxHeight = 400;
   var height = $contactUsDetail.height() < maxHeight ? $contactUsDetail.height() : maxHeight;
   $map.height(height);
 }
