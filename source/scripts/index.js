@@ -24,11 +24,20 @@ function setCarouselHeight() {
 }
 
 // 设置展示地图的宽度
-function setMapHeight(){
+function setMapHeight() {
   var $map = $('.contactUs-map'),
     $contactUsDetail = $('.contactUs-detail');
-  var maxHeight = 400;
-  var height = $contactUsDetail.height() < maxHeight ? $contactUsDetail.height() : maxHeight;
+  var maxHeight = 400,
+    screenWidth = $(document).width();
+  var height = 0;
+
+  if (screenWidth < 1200) {
+    height = $contactUsDetail.height() < maxHeight ? $contactUsDetail.height() : maxHeight;
+  }
+  else{
+    height = height = $contactUsDetail.height()
+  }
+
   $map.height(height);
 }
 
@@ -51,7 +60,8 @@ function initPortfolio() {
 // 缩放窗口时重设轮播图宽度和导航状态
 $(window).resize(function () {
   setCarouselHeight();
-  $(document).triggerHandler('scroll')
+  $(document).triggerHandler('scroll');
+  setMapHeight()
 });
 
 $(function () {
@@ -87,7 +97,7 @@ $(function () {
   }
 
   // 鼠标移开下来文字消失
-  $('#joinUs').find('.content-item').on('mouseleave', function(){
+  $('#joinUs').find('.content-item').on('mouseleave', function () {
     $('.collapse').collapse('hide')
   });
 
