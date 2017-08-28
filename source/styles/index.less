@@ -70,6 +70,9 @@
       font-size: 4rem;
     }
   }
+  #myCarousel img{
+    width: 100%;
+  }
   #myCarousel2 {
     .carousel-control {
       width: 5%;
@@ -341,18 +344,22 @@
           font-size: 14px;
           font-size: 1.4rem;
           li {
-            width: 100%;
-            height: 30px;
-            line-height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
             i {
               display: inline-block;
               width: 30px;
-              height: 32px;
+              height: 30px;
               vertical-align: middle;
-              background: url('../img/background/contactWay-bg.png') no-repeat;
             }
             span {
+              width: 85%;
               margin-left: 10px;
+              line-height: 1.2;
               vertical-align: middle;
               a {
                 text-decoration: none;
@@ -361,21 +368,30 @@
             }
           }
           li.phone i {
-            background-position: 0 0;
+            background: url('../img/background/contactWay-bg_phone.png') no-repeat;
+            background-size: cover;
           }
           li.email i {
-            background-position: 33.3% 0;
+            background: url('../img/background/contactWay-bg_email.png') no-repeat;
+            background-size: cover;
           }
           li.address i {
-            background-position: 66.6% 0;
+            background: url('../img/background/contactWay-bg_address.png') no-repeat;
+            background-size: cover;
           }
           li.website i {
-            background-position: 100% 0;
+            background: url('../img/background/contactWay-bg_website.png') no-repeat;
+            background-size: cover;
           }
           @media (max-width: 768px) {
             li {
               margin-top: 10px;
               margin-bottom: 10px;
+              font-size: 12px;
+              i{
+                width: 18px;
+                height: 18px;
+              }
             }
           }
         }

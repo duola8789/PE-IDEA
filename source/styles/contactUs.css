@@ -62,22 +62,23 @@
   font-size: 1.4rem;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li {
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li i {
   display: inline-block;
   width: 30px;
-  height: 32px;
+  height: 30px;
   vertical-align: middle;
-  background: url('../img/background/contactWay-bg.png') no-repeat;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li span {
+  width: 85%;
   margin-left: 10px;
+  line-height: 1.2;
   vertical-align: middle;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li span a {
@@ -85,21 +86,30 @@
   color: #272525;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.phone i {
-  background-position: 0 0;
+  background: url('../img/background/contactWay-bg_phone.png') no-repeat;
+  background-size: cover;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.email i {
-  background-position: 33.3% 0;
+  background: url('../img/background/contactWay-bg_email.png') no-repeat;
+  background-size: cover;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.address i {
-  background-position: 66.6% 0;
+  background: url('../img/background/contactWay-bg_address.png') no-repeat;
+  background-size: cover;
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li.website i {
-  background-position: 100% 0;
+  background: url('../img/background/contactWay-bg_website.png') no-repeat;
+  background-size: cover;
 }
 @media (max-width: 768px) {
   #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 12px;
+  }
+  #contactUsPage #contactUs .contactUs-content .contactUs-detail .contactWay li i {
+    width: 18px;
+    height: 18px;
   }
 }
 #contactUsPage #contactUs .contactUs-content .contactUs-map {
