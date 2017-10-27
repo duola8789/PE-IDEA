@@ -44,7 +44,7 @@ $(function () {
 
   // 点击分享到新浪微博
   $(document).on('click', '#sina', function () {
-    alert('抱歉，分享功能暂未开通')
+    alert('抱歉，暂不能分享到新浪微博')
   })
 });
 

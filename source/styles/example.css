@@ -58,7 +58,6 @@
 }
 #examplePage .section .exampleAnalysis {
   padding-bottom: 10px;
-  border-bottom: 1px solid #a7a7a7;
 }
 #examplePage .section .exampleAnalysis p {
   margin-bottom: 35px;
@@ -126,7 +125,9 @@
   vertical-align: middle;
 }
 #examplePage .section .exampleAnalysis .share .shareBox p.sina {
-  cursor: pointer;
+  cursor: not-allowed;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 #examplePage .section .exampleAnalysis .share .shareBox p.sina:hover {
   background: #f4f8fb;
@@ -157,6 +158,7 @@
 #examplePage .moreCases {
   height: 50px;
   line-height: 70px;
+  border-top: 1px solid #a7a7a7;
 }
 #examplePage .moreCases a {
   float: right;

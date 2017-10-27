@@ -136,9 +136,13 @@ img {
 a:hover {
   text-decoration: none;
 }
+.peWrap,
+.container {
+  min-width: 320px;
+}
 @media (min-width: 1200px) {
   .container {
-    width: 100%;
+    width: 1230px;
   }
 }
 /************************* font-size设置*************************/
@@ -187,12 +191,25 @@ body {
   animation-duration: 3s;
   animation-delay: 1s;
 }
+#case {
+  background: #eee;
+}
+#joinUs {
+  background: #fff;
+}
+#about-PE {
+  background: #eee;
+}
+#contactUs {
+  background: #fff;
+}
 header {
   position: absolute;
   width: 100% !important;
   height: 54px;
   z-index: 10000;
-  background: rgba(255, 255, 255, 0.8) !important;
+  background: #fff !important;
+  opacity: 0.95;
   border-top: 2px solid #f2f2f2;
   border-bottom: 2px solid #f2f2f2;
 }
@@ -200,6 +217,9 @@ header .row .logo {
   height: calc(54px - 4px) !important;
   line-height: calc(54px - 4px);
   z-index: 10000;
+}
+header .row .logo img {
+  max-width: 150px;
 }
 header .row nav.navbar {
   margin-bottom: 0;
@@ -235,6 +255,12 @@ header .row nav.navbar .active a:hover {
 header .row nav.navbar .active a:focus {
   background: none;
   color: #951d22;
+}
+@media (min-width: 768px) {
+  header .row .navbar-right {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 #backToTop,
 #backToBottom {
@@ -297,7 +323,7 @@ header .row nav.navbar .active a:focus {
 }
 .caseFooter .caseFooter-number {
   display: inline-block;
-  width: 200px;
+  width: 180px;
   padding: 8px 0;
   margin-left: 20px;
   border: 2px solid #272525;
@@ -325,7 +351,7 @@ header .row nav.navbar .active a:focus {
 }
 .items .item {
   position: relative;
-  padding: 2px;
+  padding: 1px;
 }
 .items .item a {
   position: relative;
@@ -385,8 +411,10 @@ header .row nav.navbar .active a:focus {
   position: absolute;
   right: 0;
   top: 0;
-  width: 55px;
-  height: 55px;
+  width: 30%;
+  height: 30%;
+  max-width: 55px;
+  max-height: 55px;
   line-height: 55px;
   text-align: center;
   color: #fff;
@@ -397,8 +425,11 @@ header .row nav.navbar .active a:focus {
 }
 .footer {
   width: 100%;
-  padding: 10px 0;
   border-top: 2px solid #f2f2f2;
+  background: #fff;
+}
+.footer .footer-content {
+  margin: 15px 0;
 }
 .footer span {
   display: inline-block;

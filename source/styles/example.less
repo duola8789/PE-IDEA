@@ -60,7 +60,6 @@
     }
     .exampleAnalysis {
       padding-bottom: 10px;
-      border-bottom: 1px solid #a7a7a7;
       p {
         margin-bottom: 35px;
       }
@@ -124,7 +123,9 @@
               vertical-align: middle;
             }
             &.sina {
-              cursor: pointer;
+              cursor: not-allowed;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
               &:hover {
                 background: #f4f8fb;
                 .transition(0.3s)
@@ -158,6 +159,7 @@
   .moreCases {
     height: 50px;
     line-height: 70px;
+    border-top: 1px solid #a7a7a7;
     a {
       float: right;
       padding: 0 4px;
