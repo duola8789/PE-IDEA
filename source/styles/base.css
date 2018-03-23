@@ -351,11 +351,12 @@ header .row nav.navbar .active a:focus {
 }
 .items .item {
   position: relative;
-  padding: 1px;
+  padding: 0;
 }
 .items .item a {
   position: relative;
   display: block;
+  margin: 2px;
   overflow: hidden;
 }
 .items .item img {
