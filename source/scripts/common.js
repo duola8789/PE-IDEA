@@ -2,7 +2,7 @@
  * Created by JESSIEJOE on 2017/8/9.
  */
 
-var $body = $("html body");
+var $body = $("html, body");
 
 // 初始化动画效果
 $(document).ready(function () {

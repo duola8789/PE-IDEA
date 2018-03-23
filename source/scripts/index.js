@@ -5,7 +5,7 @@
 var $myCarousel1 = $('#myCarousel'),
   $myCarousel2 = $('#myCarousel2'),
   $myHeader = $("#myHeader");
-var $body = $("html body");
+var $body = $("html, body");
 
 // 初始化动画效果
 $(document).ready(function () {
