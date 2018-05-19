@@ -7,7 +7,7 @@ var gulp = require('gulp'),
   //concat = require('gulp-concat'),// 任务：合并Javascript
   uglify = require('gulp-uglify'),// 任务：压缩合并后的Javascript
   rename = require('gulp-rename'),// 任务：重命名合并后的Javascript
-  //liveReload=require('gulp-livereload'),// 任务：自动刷新页面
+  // liveReload=require('gulp-livereload'),// 任务：自动刷新页面
   cleanCss = require('gulp-clean-css'),// 任务：压缩CSS文件
   //notify = require('gulp-notify');// 任务：提示错误
   plumber = require('gulp-plumber');// 任务：出现异常并不终止watch事件
@@ -55,7 +55,7 @@ gulp.task('scripts', function () {
 //监听任务，并且调用listen方法实现实时刷新页面
 //监听事件需要保证命令提示符处于打开状态，关闭后监听事件结束
 gulp.task('watching', function () {
-  //liveReload.listen();//调用listen方法
+  // liveReload.listen();//调用listen方法
   gulp.watch(['source/**/*.*'], ['cleanCss', 'scripts']);
 
 });
