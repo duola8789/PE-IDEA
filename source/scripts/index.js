@@ -103,7 +103,7 @@ $(function () {
 
   // 轮播图间隔
   $myCarousel1.carousel({
-    interval: 3000
+    interval: 5000
   });
   $myCarousel2.carousel({
     interval: 5000

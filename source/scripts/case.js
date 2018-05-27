@@ -51,6 +51,15 @@ $(function () {
       filter: filter,
       sortBy: 'original-order'
     });
+    if (!!(window.history && history.pushState)){
+      // 支持History API
+      var currentUrl = window.location.href.split('?')[0] + '?target=' + showItem;
+      // 替换url，用来从案例详情页返回上一级时使用
+      window.history.pushState(null, null, currentUrl);
+    } else {
+      // 不支持
+      console.log('请换一个现代浏览器，好么？')
+    }
   });
 
   // 案例展示瀑布流效果
