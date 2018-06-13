@@ -4,6 +4,7 @@
 
 var $myCarousel1 = $('#myCarousel'),
   $myCarousel2 = $('#myCarousel2'),
+  $myCarousel3 = $('#myCarousel3'),
   $myHeader = $("#myHeader");
 var $body = $("html, body");
 
@@ -101,13 +102,20 @@ $(function () {
     $('.collapse').collapse('hide')
   });
 
-  // 轮播图间隔
+  // 轮播图间隔;
+  // 头图
   $myCarousel1.carousel({
-    interval: 5000
+    interval: 4000
   });
+  // 主要客户
   $myCarousel2.carousel({
-    interval: 5000
+    interval: 4000
   });
+  // 关于品意
+  $myCarousel3.carousel({
+    interval: 4000
+  });
+
 
   // 案例hover效果
   $('.item').hover(function () {

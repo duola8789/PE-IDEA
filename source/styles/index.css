@@ -40,19 +40,23 @@
   vertical-align: text-bottom;
 }
 .peWrap #myCarousel,
-.peWrap #myCarousel2 {
+.peWrap #myCarousel2,
+.peWrap #myCarousel3 {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
 .peWrap #myCarousel,
 .peWrap #myCarousel2,
+.peWrap #myCarousel3,
 .peWrap #myCarousel .item,
-.peWrap #myCarousel2 .item {
+.peWrap #myCarousel2 .item,
+.peWrap #myCarousel3 .item {
   max-height: 800px;
 }
 .peWrap #myCarousel .carousel-control,
-.peWrap #myCarousel2 .carousel-control {
+.peWrap #myCarousel2 .carousel-control,
+.peWrap #myCarousel3 .carousel-control {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -403,3 +407,4 @@
 .peWrap .footer span.backupNo {
   margin: 0 5px;
 }
+/*# sourceMappingURL=index.css.map */
